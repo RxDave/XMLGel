@@ -1,0 +1,82 @@
+﻿<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #><#+
+
+void GenerateUnitTestClass(string directoryName)
+{
+	const string expectedFileSuffix = "-Expected.aml";
+	const string configFileExtension = ".config";
+#>
+using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace DaveSexton.XmlGel.UnitTests.Maml
+{
+	[TestClass]
+	public class <#= directoryName #>Tests : BaseTests
+	{
+<#+
+var root = new Uri(this.Host.ResolvePath(""));
+var path = this.Host.ResolvePath(directoryName);
+
+foreach (var file in Directory
+	.EnumerateFiles(path, "*.aml", SearchOption.AllDirectories)
+	.Where(file => !file.EndsWith(expectedFileSuffix)))
+{
+	var relativePath = Path.GetDirectoryName(root.MakeRelativeUri(new Uri(file)).ToString());
+	var name = Path.GetFileNameWithoutExtension(file);
+	var directory = Path.GetDirectoryName(file);
+	var testName = Path.Combine(relativePath, name).Replace(@"\", "_").Replace(" ", "_").Replace("-", "_").Replace(".", "_");
+	var expectedFile = Path.Combine(directory, name + expectedFileSuffix);
+	var configFile = Path.Combine(directory, name + configFileExtension);
+
+	int? expectedInvalidNodeCount = null;
+	int? expectedInvalidAttributeCount = null;
+
+	if (File.Exists(configFile))
+	{
+		var config = XDocument.Load(configFile);
+
+		expectedInvalidNodeCount = (int?) config.Root.Element("expectedInvalidNodeCount");
+		expectedInvalidAttributeCount = (int?) config.Root.Element("expectedInvalidAttributeCount");
+	}
+#>
+		[TestMethod]
+		public void <#= testName #>()
+		{
+<#+
+if (File.Exists(expectedFile))
+{
+#>
+			TestRoundTrip(
+				topic: File.ReadAllText(@"<#= file #>"), 
+				expected: File.ReadAllText(@"<#= expectedFile #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
+				expectedInvalidNodeCount: <#= expectedInvalidNodeCount.Value #><#+ } if (expectedInvalidAttributeCount.HasValue) { #>,
+				expectedInvalidAttributeCount: <#= expectedInvalidAttributeCount.Value #><#+ } #>);
+<#+
+}
+else
+{
+#>
+			TestRoundTrip(topic: File.ReadAllText(@"<#= file #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
+				expectedInvalidNodeCount: <#= expectedInvalidNodeCount.Value #><#+ } if (expectedInvalidAttributeCount.HasValue) { #>,
+				expectedInvalidAttributeCount: <#= expectedInvalidAttributeCount.Value #><#+ } #>);
+<#+
+}
+#>
+		}
+
+<#+
+}
+#>
+	}
+}
+<#+
+}
+#>

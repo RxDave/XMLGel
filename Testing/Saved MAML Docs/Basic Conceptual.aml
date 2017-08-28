@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="cbd17485-c053-4180-b0f4-72e9eef54b70" revisionNumber="0">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>This is an intro for a new MAML conceptual document.</para>
+    </introduction>
+    <section>
+      <title>Section I</title>
+      <content>
+        <autoOutline />
+        <para>This is the outer section.</para>
+      </content>
+      <sections>
+        <section>
+          <title>Subsection I</title>
+          <content>
+            <para>This  is the inner section.</para>
+          </content>
+        </section>
+      </sections>
+    </section>
+    <relatedTopics>
+      <link>{LINK}{LINK}</link>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

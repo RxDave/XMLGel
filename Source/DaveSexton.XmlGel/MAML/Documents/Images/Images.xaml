@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+										xmlns:local="clr-namespace:DaveSexton.XmlGel">
+
+	<BitmapImage x:Key="{ComponentResourceKey {x:Type local:GenericKey}, Gear}"
+							 UriSource="/DaveSexton.XmlGel;component/Maml/Documents/Images/Gear.png"
+							 DecodePixelHeight="12" />
+
+	<BitmapImage x:Key="{ComponentResourceKey {x:Type local:GenericKey}, Delete}"
+							 UriSource="/DaveSexton.XmlGel;component/Maml/Documents/Images/Delete.png"
+							 DecodePixelHeight="12" />
+
+</ResourceDictionary>

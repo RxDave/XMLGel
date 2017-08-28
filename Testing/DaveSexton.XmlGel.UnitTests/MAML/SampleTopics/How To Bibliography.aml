@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="fa24d63b-f333-41d0-b86b-2d9f702ecbb5" revisionNumber="0">
+  <developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>
+        This topic shows how to use the auto-generated bibliography feature.
+      </para>
+    </introduction>
+    <section>
+      <title>Auto-Generated Bibliography</title>
+      <content>
+        <para>
+          The auto-generated bibliography feature allows an author to
+          create an external bibliography XML file and then share it between multiple
+          topics by specifying short identifiers in <codeInline>cite</codeInline>
+          elements that match one of the references contained in the file.
+        </para>
+        <para>
+          When one or more <codeInline>cite</codeInline> elements are used,
+          Sandcastle will automatically generate a bibliography for the topic
+          in the place that the <codeInline>bibliography</codeInline> element is
+          specified and the <codeInline>cite</codeInline> elements themselves
+          will be replaced with hyperlinks to corresponding bookmarked entries in
+          the bibliography.
+        </para>
+        <alert class="tip">
+          <para>
+            The <codeInline>bibliography</codeInline> element is typically specified
+            immediately before the <codeInline>relatedTopics</codeInline> section
+            that appears at the bottom of the topic.
+          </para>
+        </alert>
+        <para>
+          To use citations a bibliography XML file must be created to store the
+          identifiers and entries.  A default bibliography file named, bibliography.xml
+          can be found in the presentation style's Data folder.
+        </para>
+        <alert class="note">
+          <para>
+            Custom tools can override the path to this file by specifying a value
+            for the <parameterReference>bibliographyData</parameterReference> parameter
+            that is used by the main_conceptual.xsl transformation.  This transformation
+            is used in Sandcastle's conceptual configuration file, conceptual.config.
+          </para>
+        </alert>
+        <procedure>
+          <title>To define citation identifiers and bibliography entries:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>
+                  If it doesn't already exist, create a new XML file named, bibliography.xml
+                  in the presentation style's Data folder.
+                </para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  Add the following content to the bibliography.xml file.
+                </para>
+                <code language="xml"><![CDATA[<bibliography>
+  <reference name="sandcastle activity">
+    <title>Sandcastle Activity Statistics</title>
+    <author>Microsoft</author>
+    <publisher>CodePlex.com</publisher>
+    <link>http://www.codeplex.com/Sandcastle/stats/view</link>
+  </reference>
+  <reference name="sandcastle styles">
+    <title>Sandcastle Styles</title>
+    <author>Paul Selormey, Eric Woodruff, Dave Sexton</author>
+    <publisher>CodePlex.com</publisher>
+    <link>http://www.codeplex.com/SandcastleStyles</link>
+  </reference>
+</bibliography>]]></code>
+                <para>
+                  The previous example specifies the root <codeInline>bibliography</codeInline>
+                  element and adds a few <codeInline>reference</codeInline> elements that
+                  will be used by another example in this topic.
+                </para>
+                <para />
+                <alert class="tip">
+                  <para>
+                    The <codeInline>title</codeInline> and <codeInline>author</codeInline>
+                    elements are required and the <codeInline>publisher</codeInline> and
+                    <codeInline>link</codeInline> elements are optional.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <procedure>
+          <title>To setup a MAML topic:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>
+                  Add the <codeInline>bibliography</codeInline> element to the topic, preferably
+                  before the <codeInline>relatedTopics</codeInline> element.
+                </para>
+                <para>
+                  See the example below.
+                </para>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+      </content>
+    </section>
+    <codeExample>
+      <description>
+        <content>
+          <para>
+            The following example uses multiple <codeInline>cite</codeInline> elements
+            to reference bibliography entries defined in the bibliography.xml file.
+          </para>
+          <para>
+            The <codeInline>bibliography</codeInline> element is also specified to have a
+            bibliography section generated automatically at the bottom of the topic.
+          </para>
+        </content>
+      </description>
+      <code language="xml"><![CDATA[<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+  <introduction>
+    <para>
+      This topic discusses Sandcastle's popularity.
+    </para>
+  </introduction>
+
+  <section>
+    <title>Sandcsatle's Popularity</title>
+
+    <content>
+      <para>
+        Sandcastle is a popular download<cite>sandcastle activity</cite>.
+      </para>
+      <para>
+        Sandcastle Styles<cite>sandcastle styles</cite> adds even more value.
+      </para>
+      <para>
+        I expect Sandcastle's popularity<cite>sandcastle activity</cite> to increase
+        as more community members become aware of its usefulness, with the help of
+        projects like Sandcastle Styles<cite>sandcastle styles</cite>.
+      </para>
+    </content>
+  </section>
+
+  <!-- Place the bibliography before the relatedTopics section -->
+  <bibliography/>
+  
+  <relatedTopics/>
+  
+</developerConceptualDocument>]]></code>
+      <comments>
+        <content>
+          <alert class="tip">
+            <para>
+              The reference identifier is not case-sensitive.
+            </para>
+          </alert>
+        </content>
+      </comments>
+    </codeExample>
+    <relatedTopics>
+      <externalLink>
+        <linkText>Sandcastle</linkText>
+        <linkAlternateText>Sandcastle on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/Sandcastle</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Sandcastle Styles</linkText>
+        <linkAlternateText>Sandcastle Styles on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/SandcastleStyles</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

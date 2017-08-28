@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1ea7dd5e-b8ac-4f83-8b0a-875af7d45fda" revisionNumber="1">
+  <developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>
+        This topic explains how to use <codeInline>codeReference</codeInline> elements in MAML topics to include snippets that are defined in an external XML file.
+      </para>
+    </introduction>
+    <section>
+      <title>How To: Using Code Snippets in MAML</title>
+      <content>
+        <para>
+          The <codeInline>codeReference</codeInline> element allows an author to specify code snippets externally and then share them between multiple topics using a short identifier.
+        </para>
+        <para>
+          To use code snippets, Sandcastle must be configured properly and a snippets XML file must be created to store the identifiers and code.
+        </para>
+        <procedure>
+          <title>To define code snippets:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Create a new XML file and name it, snippets.xml.</para>
+                <alert class="tip">
+                  <para>
+                    The file name does not have to be snippets.xml, however, that name is referenced by other examples in this topic.
+                  </para>
+                </alert>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  Add the following content to the snippets.xml file.
+                </para>
+                <code language="xml"><![CDATA[
+  <?xml version="1.0" encoding="utf-8"?>
+  <snippets>
+  
+    <item id="ClassDefinition#1">
+      <sampleCode language="CSharp">
+        public sealed partial class MyClass() {
+        }
+      </sampleCode>
+    
+      <sampleCode language="VisualBasic">
+        Public NotInheritable Partial Class MyClass
+        End Class
+      </sampleCode>
+    </item>
+  
+    <item id="DimVariable#String">
+      <sampleCode language="CSharp">
+        string variable = "Hello, World";
+      </sampleCode>
+    
+      <sampleCode language="VisualBasic">
+        Dim variable As String = "Hello, World"
+      </sampleCode>
+    </item>
+  
+    <item id="DimVariable#Int32">
+      <sampleCode language="CSharp">
+        int variable = 21;
+      </sampleCode>
+    
+      <sampleCode language="VisualBasic">
+        Dim variable As Integer = 21
+      </sampleCode>
+    </item>
+  
+  </snippets>]]></code>
+                <para>
+                  The previous example specifies a root <codeInline>snippets</codeInline>
+                  element and three <codeInline>item</codeInline> elements that each contain 
+                  a snippet of code in two different programming languages: C# and Visual Basic.
+                </para>
+                <para>
+                  The item <codeInline>id</codeInline> is a case-sensitive string that consists 
+                  of an example ID, a hash (#) and a snippet ID.  All parts of the ID are required.
+                </para>
+                <para>
+                  Each <codeInline>item</codeInline> supports one or more
+                  <codeInline>sampleCode</codeInline> elements for specifying the same code snippet
+                  in multiple languages.
+                </para>
+                <para>
+                  The <codeInline>language</codeInline> attribute is a case-sensitive identifier 
+                  that is defined in the presentation style itself.  By default, you can choose from 
+                  <literal>VisualBasic</literal>, <literal>CSharp</literal>, 
+                  <literal>ManagedCPlusPlus</literal>, <literal>JSharp</literal> or
+                  <literal>JScript</literal>.
+                </para>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <procedure>
+          <title>To configure Sandcastle:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Open Sandcastle's conceptual configuration file, conceptual.config.</para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  If it's not present already, add a new <codeInline>component</codeInline>
+                  element for the <codeInline>Microsoft.Ddue.Tools.ExampleComponent</codeInline>
+                  build component before the main transformation component.  Then add a child 
+                  <codeInline>examples</codeInline> element that references the snippets XML file, 
+                  and various <codeInline>colors</codeInline> elements to apply code coloring, 
+                  as in the following example.
+                </para>
+                <code language="xml"><![CDATA[
+  <!-- Resolve code snippets -->
+  <component type="Microsoft.Ddue.Tools.ExampleComponent"
+             assembly="%DXROOT%\ProductionTools\BuildComponents.dll">
+           
+    <examples file="snippets.xml" />
+  
+    <colors language="VisualBasic">
+      <color pattern="^\s*'[^\r\n]*" class="comment" />
+      <color pattern="\&quot;[^&quot;\r\n]*\&quot;" class="literal" />
+      <color pattern="\b((AddHandler)|(AddressOf)|(As)|(Boolean)|(ByRef)|(ByVal)|(Case)
+      |(Catch)|(Char)|(Class)|(Const)|(Continue)|(Delegate)|(Dim)|(Double)|(Each)|(Else)|(ElseIf)
+      |(End)|(Enum)|(Event)|(Exit)|(False)|(Finally)|(For)|(Friend)|(From)|(Function)|(Get)|(Handles)
+      |(If)|(Implements)|(Imports)|(In)|(Inherits)|(Integer)|(Interface)|(Is)|(Let)|(Loop)|(Me)
+      |(Module)|(MustInherit)|(MustOverride)|(MyBase)|(Namespace)|(New)|(Next)|(Nothing)|(NotInheritable)
+      |(NotOverrideable)|(Of)|(Overloads)|(Overridable)|(Overrides)|(ParamArray)|(Partial)|(Private)
+      |(Property)|(Protected)|(Public)|(RaiseEvent)|(ReadOnly)|(RemoveHandler)|(Return)|(Select)|(Set)
+      |(Shadows)|(Shared)|(Static)|(Step)|(String)|(Structure)|(Sub)|(Then)|(Throw)|(To)|(True)|(Try)
+      |(Until)|(Using)|(When)|(Where)|(While)|(With)|(WriteOnly))\b" class="keyword" />
+    </colors>
+    <colors language="CSharp">
+      <color pattern="/\*(.|\n)+?\*/" class="comment" />
+      <color pattern="//[^\r\n]*" class="comment" />
+      <color pattern="\&quot;[^&quot;\r\n]*\&quot;" class="literal" />
+      <color pattern="\b((abstract)|(as)|(ascending)|(base)|(bool)|(break)|(by)|(case)|(catch)|(char)
+      |(class)|(const)|(continue)|(default)|(delegate)|(descending)|(do)|(double)|(else)|(enum)
+      |(equals)|(event)|(extern)|(false)|(finally)|(float)|(for)|(foreach)|(from)|(get)|(group)
+      |(if)|(in)|(int)|(interface)|(internal)|(into)|(is)|(join)|(let)|(namespace)|(new)|(null)
+      |(on)|(orderby)|(out)|(override)|(params)|(private)|(protected)|(public)|(readonly)|(ref)
+      |(return)|(sealed)|(select)|(set)|(static)|(struct)|(switch)|(this)|(throw)|(true)|(try)
+      |(typeof)|(using)|(virtual)|(volatile)|(void)|(where)|(while))\b" class="keyword" />
+    </colors>
+    <colors language="ManagedCPlusPlus">
+      <color pattern="/\*(.|\n)+?\*/" class="comment" />
+      <color pattern="//[^\r\n]*" class="comment" />
+      <color pattern="\&quot;[^&quot;\r\n]*\&quot;" class="literal" />
+      <color pattern="\b((abstract)|(array)|(bool)|(break)|(case)|(catch)|(char)|(class)|(const)
+      |(continue)|(delegate)|(delete)|(do)|(double)|(else)|(enum)|(event)|(extern)|(false)
+      |(finally)|(float)|(for)|(friend)|(gcnew)|(generic)|(goto)|(if)|(initonly)|(inline)|(int)
+      |(interface)|(literal)|(namespace)|(new)|(noinline)|(nullptr)|(operator)|(private)|(property)
+      |(protected)|(public)|(ref)|(register)|(return)|(sealed)|(sizeof)|(static)|(struct)|(switch)|
+      (template)|(this)|(throw)|(true)|(try)|(typedef)|(union)|(using)|(value)|(virtual)|(void)
+      |(volatile)|(while))\b" class="keyword" />
+    </colors>
+  </component>]]></code>
+                <alert class="caution">
+                  <para>
+                    Make sure that the file name specified for the <codeInline>examples</codeInline> 
+                    element's <codeInline>file</codeInline> attribute is the same as the name of your 
+                    snippets XML file.  Also be sure to specify the appropriate path to the file if 
+                    necessary.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+      </content>
+    </section>
+    <codeExample>
+      <description>
+        <content>
+          <para>
+            The following example uses the <codeInline>codeReference</codeInline> element
+            to import the token that was defined in the previous example.
+          </para>
+        </content>
+      </description>
+      <code language="xml"><![CDATA[
+  <?xml version="1.0" encoding="utf-8"?>
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+                      				 xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        This topic contains code snippets.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Code Snippet Examples</title>
+    
+      <content>
+        <para>
+          The ClassDefinition example consists of only a single snippet (#1) in 
+          multiple languages.  Here's how to reference it in a conceptual topic: 
+        </para>
+      
+        <codeReference>ClassDefinition#1</codeReference>
+      
+        <para>
+          DimVariable is an example that consists of multiple snippets (String and Int32).
+          Here's how to reference the String snippet:
+        </para>
+      
+        <codeReference>DimVariable#String</codeReference>
+      
+        <para>
+          Here's how to generate a code sample of both DimVariable snippets combined:
+        </para>
+      
+        <codeReference>DimVariable#String,Int32</codeReference>
+      </content>
+    </section>
+  
+    <relatedTopics/>
+  
+  </developerConceptualDocument>]]></code>
+    </codeExample>
+    <relatedTopics>
+      <externalLink>
+        <linkText>Sandcastle</linkText>
+        <linkAlternateText>Sandcastle on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/Sandcastle</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Sandcastle Styles</linkText>
+        <linkAlternateText>Sandcastle Styles on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/SandcastleStyles</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

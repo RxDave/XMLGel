@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerOrientationDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>Orientation</para>
+		</introduction>
+		<inThisSection>
+			<content>
+				<para>In this section</para>
+			</content>
+		</inThisSection>
+		<reference>
+			<content>
+				<para>Reference</para>
+			</content>
+		</reference>
+		<relatedSections>
+			<content>
+				<para>Related Sections</para>
+			</content>
+		</relatedSections>
+		<externalResources />
+		<relatedTopics />
+	</developerOrientationDocument>
+</topic>

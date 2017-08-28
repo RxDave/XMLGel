@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerReferenceWithoutSyntaxDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>Reference</para>
+		</introduction>
+		<section address="Section1">
+			<title>Optional section title</title>
+			<content>
+				<para>Section content</para>
+			</content>
+		</section>
+		<languageReferenceRemarks>
+			<content>
+				<para>Language Reference Remarks</para>
+			</content>
+		</languageReferenceRemarks>
+		<codeExample>
+			<code>Code</code>
+		</codeExample>
+		<relatedTopics />
+	</developerReferenceWithoutSyntaxDocument>
+</topic>

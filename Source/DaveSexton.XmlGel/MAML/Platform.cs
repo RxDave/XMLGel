@@ -1,0 +1,29 @@
+﻿namespace DaveSexton.XmlGel.Maml
+{
+	public enum Platform
+	{
+		Win95,
+		Win98,
+		Win98Se,
+		WinMe,
+		WinNt4Server,
+		WinNt4Workstation,
+		Win2kProfessional,
+		Win2kServer,
+		Win2kAdvanced,
+		Win2kDatacenter,
+		Win2kServerApplianceKit,
+		WinXpHome,
+		WinXpProfessional,
+		WinXpMediaCenter,
+		WinXpTablet,
+		WinXpEmbedded,
+		Win2003Server,
+		NETCF,
+		Win9xFamily,
+		WinNt4Family,
+		Win2kFamily,
+		WinXpFamily,
+		EcmaCli
+	}
+}

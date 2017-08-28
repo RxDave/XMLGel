@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerSampleDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<autoOutline />
+			<para>Sample</para>
+		</introduction>
+		<procedure>
+			<title>Preparation Procedure</title>
+			<steps class="ordered">
+				<step>
+					<content>
+						<para>First step</para>
+					</content>
+				</step>
+			</steps>
+		</procedure>
+		<requirements>
+			<content>
+				<para>Requirements</para>
+			</content>
+		</requirements>
+		<demonstrates>
+			<content>
+				<para>Demonstrates</para>
+			</content>
+		</demonstrates>
+		<codeExample>
+			<description>
+				<content>
+					<para>The following example shows how to...</para>
+				</content>
+			</description>
+			<code>Code example</code>
+			<comments>
+				<content>
+					<para>Comments for the above code example</para>
+				</content>
+			</comments>
+			<input>
+				<code>Input</code>
+			</input>
+			<output>
+				<code>Output</code>
+			</output>
+			<sampleOutput>
+				<code>Sample output</code>
+			</sampleOutput>
+		</codeExample>
+		<section address="Section1">
+			<title>Additional Section</title>
+			<content>
+				<para>Section content</para>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerSampleDocument>
+</topic>

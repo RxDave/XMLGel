@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artifacts", "Artifacts", "{D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}"
+	ProjectSection(SolutionItems) = preProject
+		Artifacts\TODO.txt = Artifacts\TODO.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{21E1A355-8E11-484D-983F-05A84632FDDA}"
+	ProjectSection(SolutionItems) = preProject
+		Artifacts\Schemas\W3C - XML Schema.txt = Artifacts\Schemas\W3C - XML Schema.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DE73F4E4-8564-4448-9C96-67A4724AC6E8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{738BF541-FEF5-429C-BADE-85C46FE9F149}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External References", "External References", "{83F7DD1B-C45E-44DC-A049-F1AA7615BD13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rxx", "Rxx", "{368DC657-01CC-4D74-9A25-1188DA8F238A}"
+	ProjectSection(SolutionItems) = preProject
+		External References\Rxx\Rxx.Contracts.dll = External References\Rxx\Rxx.Contracts.dll
+		External References\Rxx\Rxx.Contracts.pdb = External References\Rxx\Rxx.Contracts.pdb
+		External References\Rxx\Rxx.dll = External References\Rxx\Rxx.dll
+		External References\Rxx\Rxx.pdb = External References\Rxx\Rxx.pdb
+		External References\Rxx\Rxx.XML = External References\Rxx\Rxx.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wikis", "Wikis", "{34A0FF15-9DA1-49AE-8951-0EDCD6B3DEF6}"
+	ProjectSection(SolutionItems) = preProject
+		Artifacts\Wikis\Features.txt = Artifacts\Wikis\Features.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{8E73F430-0541-4C3D-BF3C-B00E86247A67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visual Studio", "Visual Studio", "{F31EFA08-A5E8-4874-8EB8-72CA6782D4E2}"
+	ProjectSection(SolutionItems) = preProject
+		Artifacts\Visual Studio\VS Experimental Hive.txt = Artifacts\Visual Studio\VS Experimental Hive.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow Document Analysis", "Flow Document Analysis", "{0DC48E2C-6E6D-45A7-9EAE-DF84143CF831}"
+	ProjectSection(SolutionItems) = preProject
+		Artifacts\Flow Document Analysis\Bounding Boxes.txt = Artifacts\Flow Document Analysis\Bounding Boxes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaveSexton.XmlGel", "Source\DaveSexton.XmlGel\DaveSexton.XmlGel.csproj", "{DBED830F-878E-451C-A662-FB85D96B72DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaveSexton.XmlGel.UnitTests", "Testing\DaveSexton.XmlGel.UnitTests\DaveSexton.XmlGel.UnitTests.csproj", "{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaveSexton.XmlGel.VisualStudio", "Source\DaveSexton.XmlGel.VisualStudio\DaveSexton.XmlGel.VisualStudio.csproj", "{7342783A-7AE9-4DC8-8F08-D7A62100B813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaveSexton.XmlGel.UI", "Testing\DaveSexton.XmlGel.UI\DaveSexton.XmlGel.UI.csproj", "{FDF94080-8345-477F-A574-D5EDABFF8F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaveSexton.XmlGel.Labs", "Testing\DaveSexton.XmlGel.Labs\DaveSexton.XmlGel.Labs.csproj", "{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{5158086B-66DC-4236-B759-DF54624E66A6}"
+	ProjectSection(SolutionItems) = preProject
+		External References\Labs\DaveSexton.Labs.Contracts.dll = External References\Labs\DaveSexton.Labs.Contracts.dll
+		External References\Labs\DaveSexton.Labs.dll = External References\Labs\DaveSexton.Labs.dll
+		External References\Labs\DaveSexton.Labs.pdb = External References\Labs\DaveSexton.Labs.pdb
+		External References\Labs\DaveSexton.Labs.xml = External References\Labs\DaveSexton.Labs.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBED830F-878E-451C-A662-FB85D96B72DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBED830F-878E-451C-A662-FB85D96B72DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBED830F-878E-451C-A662-FB85D96B72DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBED830F-878E-451C-A662-FB85D96B72DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7342783A-7AE9-4DC8-8F08-D7A62100B813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7342783A-7AE9-4DC8-8F08-D7A62100B813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7342783A-7AE9-4DC8-8F08-D7A62100B813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7342783A-7AE9-4DC8-8F08-D7A62100B813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF94080-8345-477F-A574-D5EDABFF8F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF94080-8345-477F-A574-D5EDABFF8F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF94080-8345-477F-A574-D5EDABFF8F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF94080-8345-477F-A574-D5EDABFF8F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21E1A355-8E11-484D-983F-05A84632FDDA} = {D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}
+		{368DC657-01CC-4D74-9A25-1188DA8F238A} = {83F7DD1B-C45E-44DC-A049-F1AA7615BD13}
+		{34A0FF15-9DA1-49AE-8951-0EDCD6B3DEF6} = {D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}
+		{F31EFA08-A5E8-4874-8EB8-72CA6782D4E2} = {D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}
+		{0DC48E2C-6E6D-45A7-9EAE-DF84143CF831} = {D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}
+		{DBED830F-878E-451C-A662-FB85D96B72DF} = {738BF541-FEF5-429C-BADE-85C46FE9F149}
+		{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33} = {8E73F430-0541-4C3D-BF3C-B00E86247A67}
+		{7342783A-7AE9-4DC8-8F08-D7A62100B813} = {738BF541-FEF5-429C-BADE-85C46FE9F149}
+		{FDF94080-8345-477F-A574-D5EDABFF8F42} = {8E73F430-0541-4C3D-BF3C-B00E86247A67}
+		{7BBEA27D-D576-4A3F-AD27-C1450FFE0959} = {8E73F430-0541-4C3D-BF3C-B00E86247A67}
+		{5158086B-66DC-4236-B759-DF54624E66A6} = {83F7DD1B-C45E-44DC-A049-F1AA7615BD13}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A865EE5-32C7-4D15-8072-05FEB77DDD10}
+	EndGlobalSection
+EndGlobal

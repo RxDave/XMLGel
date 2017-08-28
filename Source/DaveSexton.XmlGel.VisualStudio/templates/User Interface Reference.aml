@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerUIReferenceDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<autoOutline />
+			<para>User Interface</para>
+		</introduction>
+		<taskList>
+			<content>
+				<definitionTable>
+					<definedTerm>First task</definedTerm>
+					<definition>
+						<para>A particular task that the user interface supports.</para>
+					</definition>
+				</definitionTable>
+			</content>
+		</taskList>
+		<uiElementList>
+			<content>
+				<definitionTable>
+					<definedTerm>First UI element</definedTerm>
+					<definition>
+						<para>A particular field in the user interface.</para>
+					</definition>
+				</definitionTable>
+			</content>
+		</uiElementList>
+		<section address="Section1">
+			<title>Additional Section</title>
+			<content>
+				<para>Section content</para>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerUIReferenceDocument>
+</topic>

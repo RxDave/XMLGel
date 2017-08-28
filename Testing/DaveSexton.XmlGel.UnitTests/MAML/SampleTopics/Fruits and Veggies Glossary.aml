@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="b9b28808-e89e-4dfc-a760-c4a92b53b854" revisionNumber="0">
+  <developerGlossaryDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <glossary>
+      <title>The Fruits &amp; Veggies Glossary</title>
+      <glossaryDiv address="vegetables">
+        <title>Vegetables</title>
+        <glossaryEntry>
+          <terms>
+            <term>Turnip</term>
+            <term>Spinach Turnip Stew</term>
+          </terms>
+          <definition>
+            <para>Yum :|</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Celery</term>
+          </terms>
+          <definition>
+            <para>Anyone have some peanut butter?</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Broccoli</term>
+          </terms>
+          <definition>
+            <para>Down with cancer.</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Avocado</term>
+          </terms>
+          <definition>
+            <para>Used often in Mexican dishes.</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Carrot</term>
+          </terms>
+          <definition>
+            <para>Um, what's up doc?</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Pea</term>
+            <term>Pea Soup</term>
+          </terms>
+          <definition>
+            <para>Green and gooey.</para>
+          </definition>
+        </glossaryEntry>
+      </glossaryDiv>
+      <glossaryDiv address="fruits">
+        <title>Fruits</title>
+        <glossaryEntry>
+          <terms>
+            <term>Blue Berry</term>
+          </terms>
+          <definition>
+            <para>Small and peculiar.</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Grape Juice</term>
+            <term>Grape Aid</term>
+            <term>Grapes</term>
+          </terms>
+          <definition>
+            <para>The purple stuff.</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Apple</term>
+          </terms>
+          <definition>
+            <para>One a day...</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Orange</term>
+          </terms>
+          <definition>
+            <para>Also a color :)</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Grapefruit</term>
+          </terms>
+          <definition>
+            <para>A citrus fruit.</para>
+          </definition>
+        </glossaryEntry>
+        <glossaryEntry>
+          <terms>
+            <term>Bananna</term>
+            <term>Bananna Split</term>
+          </terms>
+          <definition>
+            <para>Delicious!</para>
+          </definition>
+        </glossaryEntry>
+      </glossaryDiv>
+    </glossary>
+  </developerGlossaryDocument>
+</topic>

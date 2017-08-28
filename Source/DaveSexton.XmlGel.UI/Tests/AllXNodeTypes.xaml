@@ -1,0 +1,153 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<FlowDocument x:Key="AllNodeTypesDocument">
+
+		<Section>
+			<Paragraph>
+				This is the
+				<Bold>First</Bold>
+				paragraph of the
+				<Bold>First</Bold>
+				section.
+			</Paragraph>
+
+			<Paragraph>
+				This is the
+				<Bold>Second</Bold>
+				paragraph
+				<Figure Width="50" HorizontalAnchor="ContentLeft">
+					<BlockUIContainer>
+						<Image Source="../Images/CheckMedium.bmp" />
+					</BlockUIContainer>
+				</Figure>
+				of the
+				<Bold>First</Bold>
+				section.
+			</Paragraph>
+		</Section>
+
+		<Section>
+			<Paragraph>
+				<Floater HorizontalAlignment="Right">
+					<Paragraph>
+						This is
+						<Italic>Floating.</Italic>
+					</Paragraph>
+				</Floater>
+
+				This is the
+				<Bold>First</Bold>
+				paragraph of the
+				<Bold>Second</Bold>
+				section.
+			</Paragraph>
+
+			<List>
+				<ListItem>
+					<Paragraph>
+						This is the
+						<Italic>First</Italic>
+						list item.
+					</Paragraph>
+				</ListItem>
+				<ListItem>
+					<Paragraph>
+						This is the
+						<Italic>Second</Italic>
+						list item.
+					</Paragraph>
+				</ListItem>
+				<ListItem>
+					<Paragraph>
+						This is the
+						<Italic>Third</Italic>
+						list item.
+					</Paragraph>
+				</ListItem>
+			</List>
+		</Section>
+
+		<Table>
+			<TableRowGroup>
+
+				<TableRow>
+					<TableCell>
+						<Paragraph>
+							This is the
+							<Underline>First</Underline>
+							cell of the
+							<Underline>First</Underline>
+							row.
+						</Paragraph>
+					</TableCell>
+					<TableCell>
+						<Paragraph>
+							This is the
+							<Underline>Second</Underline>
+							cell of the
+							<Underline>First</Underline>
+							row.
+						</Paragraph>
+					</TableCell>
+				</TableRow>
+
+				<TableRow>
+					<TableCell>
+						<Paragraph>
+							This is the
+							<Underline>First</Underline>
+							cell of the
+							<Underline>Second</Underline>
+							row.
+						</Paragraph>
+					</TableCell>
+					<TableCell>
+						<Paragraph>
+							This is the
+							<Underline>Second</Underline>
+							cell of the
+							<Underline>Second</Underline>
+							row.
+						</Paragraph>
+					</TableCell>
+				</TableRow>
+
+			</TableRowGroup>
+		</Table>
+
+		<Section>
+			<Paragraph>
+				This is a
+				<Hyperlink>hyperlink</Hyperlink>
+				to a website.
+			</Paragraph>
+			<Paragraph>
+				Select an item:
+				<InlineUIContainer>
+					<ComboBox>
+						<ComboBoxItem IsSelected="True">First</ComboBoxItem>
+						<ComboBoxItem>Second</ComboBoxItem>
+						<ComboBoxItem>Third</ComboBoxItem>
+					</ComboBox>
+				</InlineUIContainer>
+			</Paragraph>
+			<Paragraph>
+				This text is
+				<LineBreak />
+				broken up by
+				<LineBreak />
+				line breaks.
+			</Paragraph>
+			<Paragraph>
+				<Span>
+					This
+					<Bold>bold text</Bold>
+					is inside of a span.
+				</Span>
+			</Paragraph>
+		</Section>
+
+	</FlowDocument>
+
+</ResourceDictionary>

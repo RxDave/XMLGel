@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerSDKTechnologyOverviewCodeDirectoryDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>$safeitemname$ Code Directory</para>
+		</introduction>
+		<codeList>
+			<content>
+				<para>Code List</para>
+			</content>
+		</codeList>
+		<relatedTopics />
+	</developerSDKTechnologyOverviewCodeDirectoryDocument>
+</topic>

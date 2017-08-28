@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBED830F-878E-451C-A662-FB85D96B72DF}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaveSexton.XmlGel</RootNamespace>
+    <AssemblyName>DaveSexton.XmlGel</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>False</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsDisjunctiveRequires>False</CodeContractsDisjunctiveRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnonymousCommand.cs" />
+    <Compile Include="Maml\MamlPartLayout.cs" />
+    <Compile Include="Maml\Documents\Adorners\GhostLabelsAdorner - Style.cs" />
+    <Compile Include="Maml\Documents\Adorners\GhostLabelsAdorner.cs" />
+    <Compile Include="Maml\MamlPartLayoutMeasurementContext.cs" />
+    <Compile Include="PartFactory.cs" />
+    <Compile Include="Documents\CollapsibleSectionOutline.cs" />
+    <Compile Include="Documents\CollapsibleSectionOutlineNode.cs" />
+    <Compile Include="Documents\TextElementContainerItemKind.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\DrawingContextExtensions.cs" />
+    <Compile Include="Extensions\TextPointerExtensions.cs" />
+    <Compile Include="Extensions\PointExtensions.cs" />
+    <Compile Include="Extensions\RectExtensions.cs" />
+    <Compile Include="Extensions\XmlSchemaExtensions.cs" />
+    <Compile Include="Extensions\XmlSchemaValidationContext.cs" />
+    <Compile Include="InvokeMethodExtension.cs" />
+    <Compile Include="DefaultedTextBox.cs" />
+    <Compile Include="Documents\CollapsibleSectionHeaderContentItem.cs" />
+    <Compile Include="Documents\CommentInline.cs" />
+    <Compile Include="Documents\CommentInlineNode.cs" />
+    <Compile Include="Documents\CollapsibleSection.cs" />
+    <Compile Include="Documents\CollapsibleSectionNode.cs" />
+    <Compile Include="Documents\CommentBlock.cs" />
+    <Compile Include="Documents\CommentBlockNode.cs" />
+    <Compile Include="Documents\FlowDocumentCommands.cs" />
+    <Compile Include="Documents\HeaderedSectionNode{TElement}.cs" />
+    <Compile Include="Documents\HeaderedSectionNode.cs" />
+    <Compile Include="Documents\HeaderedSection.cs" />
+    <Compile Include="Documents\InlineUIContainerNode{TElement}.cs" />
+    <Compile Include="Documents\IUIElementContainer.cs" />
+    <Compile Include="Documents\OptionItem.cs" />
+    <Compile Include="Documents\ParagraphNode{TElement}.cs" />
+    <Compile Include="Documents\Options.cs" />
+    <Compile Include="Documents\OptionsNode.cs" />
+    <Compile Include="Documents\RunNormalization.cs" />
+    <Compile Include="Documents\SectionNode{TElement}.cs" />
+    <Compile Include="Documents\ErrorBlockNode.cs" />
+    <Compile Include="Documents\ErrorInlineNode.cs" />
+    <Compile Include="Documents\ErrorInline.cs" />
+    <Compile Include="Documents\ErrorBlock.cs" />
+    <Compile Include="Documents\RunNode{TElement}.cs" />
+    <Compile Include="Documents\LiteralNode.cs" />
+    <Compile Include="Extensions\TextElementExtensions.cs" />
+    <Compile Include="CommandExtension.cs" />
+    <Compile Include="GenericKey.cs" />
+    <Compile Include="IVisitor.cs" />
+    <Compile Include="FlowDocumentToXDocumentVisitor.cs" />
+    <Compile Include="Documents\Literal.cs" />
+    <Compile Include="KeySequenceGesture.cs" />
+    <Compile Include="Maml\AlertKind.cs" />
+    <Compile Include="Maml\AlertKindToImageConverter.cs" />
+    <Compile Include="Maml\CaptionPlacement.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructureTabLocation.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructureTabRowBuilder.cs" />
+    <Compile Include="Maml\Documents\MamlNodeAttributeOptionScalarSource.cs" />
+    <Compile Include="Maml\Documents\MamlNodeAttributeOptionFactory.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructurePalette - Style.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructureTab.cs" />
+    <Compile Include="Maml\Documents\Adorners\MouseAdorner.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructurePalette.cs" />
+    <Compile Include="Maml\Documents\Adorners\StructureTabRow.cs" />
+    <Compile Include="Maml\Documents\Adorners\EditorAdornerBase.cs" />
+    <Compile Include="Maml\Documents\MamlLegacySyntax.cs" />
+    <Compile Include="Maml\Documents\MamlAnyNode.cs" />
+    <Compile Include="Maml\Documents\MamlCodeSection.cs" />
+    <Compile Include="Maml\Documents\MamlSecondaryErrorTitle.cs" />
+    <Compile Include="Maml\Documents\MamlNonLocErrorTitle.cs" />
+    <Compile Include="Maml\MamlPart.cs" />
+    <Compile Include="Part.cs" />
+    <Compile Include="Part{TNode,TVisitor}.cs" />
+    <Compile Include="TypeCodeValidationRule.cs" />
+    <Compile Include="Maml\Documents\Visitors\MamlToFlowDocumentVisitor - Nodes.cs" />
+    <Compile Include="Maml\Documents\CodeEntityDocument.cs" />
+    <Compile Include="Maml\Documents\ConceptualDocument.cs" />
+    <Compile Include="Maml\Documents\ErrorMessageDocument.cs" />
+    <Compile Include="Maml\Documents\GlossaryDocument.cs" />
+    <Compile Include="Maml\Documents\HowToDocument.cs" />
+    <Compile Include="Maml\Documents\MamlParameterReference.cs" />
+    <Compile Include="Maml\Documents\MamlPlatforms.cs" />
+    <Compile Include="Maml\Documents\MamlPlatformNote.cs" />
+    <Compile Include="Maml\Documents\MamlPlatformNotes.cs" />
+    <Compile Include="Maml\Documents\MamlPermissions.cs" />
+    <Compile Include="Maml\Documents\MamlExceptions.cs" />
+    <Compile Include="Maml\Documents\MamlParameters.cs" />
+    <Compile Include="Maml\Documents\MamlParameterReferenceDescription.cs" />
+    <Compile Include="Maml\Documents\MamlGenericParameters.cs" />
+    <Compile Include="Maml\Documents\MamlCodeReferenceDescription.cs" />
+    <Compile Include="Maml\Documents\MamlEmpty.cs" />
+    <Compile Include="Maml\Documents\MamlCodeEntity.cs" />
+    <Compile Include="Maml\Documents\OrientationDocument.cs" />
+    <Compile Include="Maml\Documents\ReferenceWithoutSyntaxDocument.cs" />
+    <Compile Include="Maml\Documents\ReferenceWithSyntaxDocument.cs" />
+    <Compile Include="Maml\Documents\SampleDocument.cs" />
+    <Compile Include="Maml\Documents\SdkArchitectureDocument.cs" />
+    <Compile Include="Maml\Documents\SdkCodeDirectoryDocument.cs" />
+    <Compile Include="Maml\Documents\SdkOrientationDocument.cs" />
+    <Compile Include="Maml\Documents\SdkScenariosDocument.cs" />
+    <Compile Include="Maml\Documents\SdkSummaryDocument.cs" />
+    <Compile Include="Maml\Documents\TroubleshootingDocument.cs" />
+    <Compile Include="Maml\Documents\UIReferenceDocument.cs" />
+    <Compile Include="Documents\Visuals\CollapsibleSectionToggleButton.cs" />
+    <Compile Include="Maml\Documents\WalkthroughDocument.cs" />
+    <Compile Include="Maml\Documents\WhitePaperDocument.cs" />
+    <Compile Include="Maml\Documents\XmlReferenceDocument.cs" />
+    <Compile Include="Maml\Documents\MamlCodeEntities.cs" />
+    <Compile Include="Maml\Documents\MamlAssembly.cs" />
+    <Compile Include="Maml\Documents\MamlAttributes.cs" />
+    <Compile Include="Maml\Documents\MamlSyntaxSection.cs" />
+    <Compile Include="Maml\Documents\MamlSchemaHierarchy.cs" />
+    <Compile Include="Maml\Documents\MamlAttribute.cs" />
+    <Compile Include="Maml\Documents\MamlAttributesAndElements.cs" />
+    <Compile Include="Maml\Documents\MamlElementInformation.cs" />
+    <Compile Include="Maml\Documents\MamlSingleParagraphSimpleContent.cs" />
+    <Compile Include="Maml\Documents\MamlExternalResources.cs" />
+    <Compile Include="Maml\Documents\MamlCodeExample.cs" />
+    <Compile Include="Maml\Documents\MamlCodeExamples.cs" />
+    <Compile Include="Maml\Documents\MamlRelatedEntry.cs" />
+    <Compile Include="Maml\Documents\Visitors\CodeEntityDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\ErrorMessageDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToCodeEntityDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToErrorMessageDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToOrientationDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToReferenceWithoutSyntaxDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToReferenceWithSyntaxDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSampleDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSdkArchitectureDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSdkCodeDirectoryDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSdkOrientationDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSdkScenariosDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToSdkSummaryDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToTroubleshootingDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToUIReferenceDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToWalkthroughDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToWhitePaperDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToXmlReferenceVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\OrientationDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\ReferenceWithoutSyntaxDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\ReferenceWithSyntaxDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SampleDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SdkArchitectureDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SdkCodeDirectoryDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SdkOrientationDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SdkScenariosDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\SdkSummaryDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\TroubleshootingDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\UIReferenceDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\WalkthroughDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToHowToDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\HowToDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\MamlTerms.cs" />
+    <Compile Include="Maml\Documents\MamlGlossaryEntry.cs" />
+    <Compile Include="Maml\Documents\MamlGlossaryDiv.cs" />
+    <Compile Include="Maml\Documents\MamlGlossary.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToGlossaryDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\GlossaryDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\MamlExternalLinkTarget.cs" />
+    <Compile Include="Maml\Documents\MamlExternalLinkAlternateText.cs" />
+    <Compile Include="Maml\Documents\MamlExternalLinkUri.cs" />
+    <Compile Include="Maml\Documents\MamlExternalLinkText.cs" />
+    <Compile Include="Maml\Documents\MamlCodeReference.cs" />
+    <Compile Include="Maml\Documents\MamlAutoOutline.cs" />
+    <Compile Include="Maml\Documents\MamlDefinedTerm.cs" />
+    <Compile Include="Maml\Documents\MamlInlineContainer.cs" />
+    <Compile Include="Maml\Documents\MamlItalic.cs" />
+    <Compile Include="Maml\Documents\MamlUnderline.cs" />
+    <Compile Include="Maml\Documents\MamlBold.cs" />
+    <Compile Include="Maml\Documents\MamlUri.cs" />
+    <Compile Include="Maml\Documents\MamlTitle.cs" />
+    <Compile Include="Maml\Documents\MamlEnum.cs" />
+    <Compile Include="Maml\Documents\MamlInteger.cs" />
+    <Compile Include="Maml\Documents\MamlString.cs" />
+    <Compile Include="Maml\Documents\MamlEnum{TEnum}.cs" />
+    <Compile Include="Maml\Documents\MamlImage.cs" />
+    <Compile Include="Maml\Documents\MamlMediaLinkInline.cs" />
+    <Compile Include="Maml\Documents\MamlCodeEntityReference.cs" />
+    <Compile Include="Maml\Documents\MamlQuote.cs" />
+    <Compile Include="Maml\Documents\MamlSampleRef.cs" />
+    <Compile Include="Maml\Documents\MamlRelatedTopics.cs" />
+    <Compile Include="Maml\Documents\MamlSectionSimple.cs" />
+    <Compile Include="Maml\Documents\MamlSections.cs" />
+    <Compile Include="Maml\Documents\MamlMediaLink.cs" />
+    <Compile Include="Maml\Documents\MamlNamedSection.cs" />
+    <Compile Include="Maml\Documents\MamlStep.cs" />
+    <Compile Include="Maml\Documents\MamlTableEntry.cs" />
+    <Compile Include="Maml\Documents\MamlTableRow.cs" />
+    <Compile Include="Maml\Documents\MamlTableHeader.cs" />
+    <Compile Include="Maml\Documents\MamlTable.cs" />
+    <Compile Include="Maml\Documents\MamlContent.cs" />
+    <Compile Include="Maml\Documents\MamlDefinition.cs" />
+    <Compile Include="Maml\Documents\MamlDefinitionTable.cs" />
+    <Compile Include="Maml\Documents\MamlDynamicLink.cs" />
+    <Compile Include="Maml\Documents\MamlCopyright.cs" />
+    <Compile Include="Maml\Documents\MamlRestrictedText.cs" />
+    <Compile Include="Maml\Documents\MamlCodeInline.cs" />
+    <Compile Include="Maml\Documents\MamlCommand.cs" />
+    <Compile Include="Maml\Documents\MamlLocalUri.cs" />
+    <Compile Include="Maml\Documents\MamlFictitiousUri.cs" />
+    <Compile Include="Maml\Documents\MamlSharedContentParameter.cs" />
+    <Compile Include="Maml\Documents\MamlConditions.cs" />
+    <Compile Include="Maml\Documents\MamlListItem.cs" />
+    <Compile Include="Maml\Documents\MamlIntroduction.cs" />
+    <Compile Include="Maml\Documents\MamlSectionContent.cs" />
+    <Compile Include="Maml\Documents\MamlSectionContentWithOutline.cs" />
+    <Compile Include="Maml\Documents\MamlSummary.cs" />
+    <Compile Include="Maml\Documents\Visitors\WhitePaperDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\XmlReferenceToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\Editors\Controls\AttributesGrid.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AttributesGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Maml\Editors\Controls\DialogButtons.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DialogButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Maml\Editors\Controls\DialogCommands.cs" />
+    <Compile Include="Maml\Editors\DocumentPropertiesTypeConverter.cs" />
+    <Compile Include="Maml\Editors\CustomPropertyDescriptor.cs" />
+    <Compile Include="Maml\Editors\DocumentProperties.cs" />
+    <Compile Include="Maml\Editors\GlobalOptions.cs" />
+    <Compile Include="Maml\Editors\MetadataAttributesEditor.cs" />
+    <Compile Include="Maml\Editors\MetadataAttributesEditorWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MetadataAttributesEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Maml\Editors\MetadataAttributesTypeConverter.cs" />
+    <Compile Include="Maml\Editors\MetadataCustomPropertiesEditor.cs" />
+    <Compile Include="Maml\Editors\MetadataCustomPropertiesEditorWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MetadataCustomPropertiesEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Maml\Editors\MetadataCustomPropertiesTypeConverter.cs" />
+    <Compile Include="Maml\Editors\MetadataKeywordsEditor.cs" />
+    <Compile Include="Maml\Editors\MetadataKeywordsEditorWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MetadataKeywordsEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Maml\Editors\MetadataKeywordsTypeConverter.cs" />
+    <Compile Include="Maml\Editors\NameValuePair.cs" />
+    <Compile Include="Maml\Editors\NameValuePairEqualityComparer.cs" />
+    <Compile Include="Maml\Editors\SortedPropertyAttribute.cs" />
+    <Compile Include="Maml\Editors\SortedPropertyConverter.cs" />
+    <Compile Include="Maml\Maml.cs" />
+    <Compile Include="Maml\Maml - hierarchy.cs" />
+    <Compile Include="Maml\Maml - developer.cs" />
+    <Compile Include="Maml\Maml - developerStructure.cs" />
+    <Compile Include="Maml\Maml - developerReference.cs" />
+    <Compile Include="Maml\Maml - structureMedia.cs" />
+    <Compile Include="Maml\Maml - structureProcedure.cs" />
+    <Compile Include="Maml\Maml - structureList.cs" />
+    <Compile Include="Maml\Maml - structureTable.cs" />
+    <Compile Include="Maml\Maml - structure.cs" />
+    <Compile Include="Maml\Maml - conditionSet.cs" />
+    <Compile Include="Maml\Maml - blockSoftware.cs" />
+    <Compile Include="Maml\Maml - blockCommon.cs" />
+    <Compile Include="Maml\Maml - inlineLinking.cs" />
+    <Compile Include="Maml\Maml - inlineUi.cs" />
+    <Compile Include="Maml\Maml - inlineSoftware.cs" />
+    <Compile Include="Maml\Maml - inlineCommon.cs" />
+    <Compile Include="Maml\Maml - baseConditional.cs" />
+    <Compile Include="Maml\Maml - glossary.cs" />
+    <Compile Include="Maml\ImagePlacement.cs" />
+    <Compile Include="Maml\MamlTopicEditor.cs" />
+    <Compile Include="Maml\MamlTopicEditorTextBox.cs" />
+    <Compile Include="Maml\StepsKind.cs" />
+    <Compile Include="Maml\ListKind.cs" />
+    <Compile Include="Maml\MamlCompanion.cs" />
+    <Compile Include="Maml\RelatedTopicCategory.cs" />
+    <Compile Include="Maml\FictitiousUriKind.cs" />
+    <Compile Include="Maml\LocalUriKind.cs" />
+    <Compile Include="Maml\DynamicLinkKind.cs" />
+    <Compile Include="Maml\CopyrightKind.cs" />
+    <Compile Include="Maml\TextKind.cs" />
+    <Compile Include="Maml\Platform.cs" />
+    <Compile Include="Maml\DevLanguage.cs" />
+    <Compile Include="Maml\EnumStringConverter.cs" />
+    <Compile Include="Maml\Documents\MamlNode.cs" />
+    <Compile Include="Maml\Documents\MamlPara.cs" />
+    <Compile Include="Maml\Documents\MamlSharedContent.cs" />
+    <Compile Include="Maml\Documents\MamlSteps.cs" />
+    <Compile Include="Maml\Documents\MamlExternalLink.cs" />
+    <Compile Include="Maml\Documents\MamlInline.cs" />
+    <Compile Include="Maml\Documents\MamlText.cs" />
+    <Compile Include="Maml\Documents\MamlAlert.cs" />
+    <Compile Include="Maml\Documents\MamlCode.cs" />
+    <Compile Include="Maml\Documents\MamlLink.cs" />
+    <Compile Include="Maml\Documents\MamlList.cs" />
+    <Compile Include="Maml\Documents\MamlProcedure.cs" />
+    <Compile Include="Maml\Documents\MamlSection.cs" />
+    <Compile Include="Maml\Documents\Templates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Templates.resx</DependentUpon>
+    </Compile>
+    <Compile Include="XElementNameConverter.cs" />
+    <Compile Include="Xml\XmlFragmentSchemaValidatorContext.cs" />
+    <Compile Include="Xml\XmlSchemaErrorAnnotation.cs" />
+    <Compile Include="Xml\XEntitizedCData.cs" />
+    <Compile Include="Xml\XEntitizedComment.cs" />
+    <Compile Include="Xml\IXElementNode.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToConceptualDocumentVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\FlowDocumentToMamlVisitor.cs" />
+    <Compile Include="Maml\Documents\Visitors\ConceptualDocumentToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\MamlDocument.cs" />
+    <Compile Include="Maml\Documents\Visitors\MamlToFlowDocumentVisitor.cs" />
+    <Compile Include="Maml\MamlDocumentKind.cs" />
+    <Compile Include="Maml\IMamlDocument.cs" />
+    <Compile Include="Maml\IMamlMetadata.cs" />
+    <Compile Include="Maml\MamlAttributeFactory.cs" />
+    <Compile Include="Maml\MamlLinkData.cs" />
+    <Compile Include="Maml\MamlLinkKind.cs" />
+    <Compile Include="Maml\MamlMetadata.cs" />
+    <Compile Include="Properties\Text.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Text.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor.cs" />
+    <Compile Include="Documents\AnchoredBlockNode.cs" />
+    <Compile Include="Documents\BlockNode{TElement}.cs" />
+    <Compile Include="Documents\BlockUIContainerNode.cs" />
+    <Compile Include="Documents\BoldNode.cs" />
+    <Compile Include="Documents\AnchoredBlockNode{TElement}.cs" />
+    <Compile Include="Documents\BlockNode.cs" />
+    <Compile Include="Documents\TextElementVisitor.cs" />
+    <Compile Include="Documents\InlineNode.cs" />
+    <Compile Include="Documents\TextElementNode.cs" />
+    <Compile Include="Documents\SpanNode{TElement}.cs" />
+    <Compile Include="Documents\FigureNode.cs" />
+    <Compile Include="Documents\FloaterNode.cs" />
+    <Compile Include="Documents\HyperlinkNode.cs" />
+    <Compile Include="Documents\InlineNode{TElement}.cs" />
+    <Compile Include="Documents\InlineUIContainerNode.cs" />
+    <Compile Include="Documents\ItalicNode.cs" />
+    <Compile Include="Documents\ITextElementNode.cs" />
+    <Compile Include="Documents\ITextElementNodeFactory.cs" />
+    <Compile Include="Documents\ITextElementVisitor.cs" />
+    <Compile Include="Documents\LineBreakNode.cs" />
+    <Compile Include="Documents\ListItemNode.cs" />
+    <Compile Include="Documents\ListNode.cs" />
+    <Compile Include="Documents\ParagraphNode.cs" />
+    <Compile Include="INode.cs" />
+    <Compile Include="IVisitor{TSelf, TNode}.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Documents\RunNode.cs" />
+    <Compile Include="Documents\SectionNode.cs" />
+    <Compile Include="Documents\SpanNode.cs" />
+    <Compile Include="Documents\TextElementNodeFactory.cs" />
+    <Compile Include="Documents\TableCellNode.cs" />
+    <Compile Include="Documents\TableNode.cs" />
+    <Compile Include="Documents\TableRowGroupNode.cs" />
+    <Compile Include="Documents\TableRowNode.cs" />
+    <Compile Include="Documents\TextElementNode{TElement}.cs" />
+    <Compile Include="Documents\UnderlineNode.cs" />
+    <Compile Include="XContainerToFlowDocumentVisitor.cs" />
+    <Compile Include="Xml\IXNode.cs" />
+    <Compile Include="Xml\IXVisitor.cs" />
+    <Compile Include="Xml\XElementNode.cs" />
+    <Compile Include="Xml\XEntitizedText.cs" />
+    <Compile Include="Extensions\XExtensions.cs" />
+    <Compile Include="Xml\XmlFragmentSchemaValidator.cs" />
+    <Compile Include="Xml\XmlLocalUrlResolver.cs" />
+    <Compile Include="Xml\XmlSchemaParticlesExpected.cs" />
+    <Compile Include="Xml\XVisitableCData.cs" />
+    <Compile Include="Xml\XVisitableComment.cs" />
+    <Compile Include="Xml\XVisitableElement.cs" />
+    <Compile Include="Xml\XVisitableNode.cs" />
+    <Compile Include="Xml\XVisitableProcessingInstruction.cs" />
+    <Compile Include="Xml\XVisitableText.cs" />
+    <Compile Include="Xml\XVisitor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Maml\Documents\Templates.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Templates.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maml\Enums\AlertKind.FromDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\AlertKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\AlertKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\CaptionPlacement.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\CaptionPlacement.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\ImagePlacement.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\ImagePlacement.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\StepsKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\StepsKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\ListKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\ListKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\RelatedTopicCategory.FromDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\RelatedTopicCategory.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\RelatedTopicCategory.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\FictitiousUriKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\FictitiousUriKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\LocalUriKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\LocalUriKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\DynamicLinkKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\DynamicLinkKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\CopyrightKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\CopyrightKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\TextKind.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\TextKind.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\DevLanguage.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\Enums\DevLanguage.FromDocumentValue.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maml\Enums\DevLanguage.ToDocumentValue.resx" />
+    <EmbeddedResource Include="Maml\Enums\Platform.DisplayNames.resx" />
+    <EmbeddedResource Include="Maml\MamlTopicEditorTextBox.resx">
+      <DependentUpon>MamlTopicEditorTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Text.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Text.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Conceptual.xml" />
+    <Resource Include="Maml\Documents\Images\Gear.png" />
+    <Resource Include="Maml\Documents\Images\Delete.png" />
+    <Content Include="Maml\Schema\Authoring\base.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\baseConditional.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\block.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\blockCommon.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\blockSoftware.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\conditionSet.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\developer.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\developerReference.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\developerStructure.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\glossary.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\hierarchy.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\inline.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\inlineCommon.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\inlineLinking.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\inlineSoftware.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\inlineUi.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\structure.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\structureList.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\structureMedia.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\structureProcedure.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\structureTable.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\xlink.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Schema\Authoring\__internal.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Glossary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\HowTo.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Walkthrough.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Orientation.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\SdkArchitecture.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\ErrorMessage.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\XmlReference.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Whitepaper.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\UserInterface.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\SdkCodeDirectory.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\SdkScenarios.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\SdkSummary.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\SdkOrientation.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Reference.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Sample.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\Troubleshooting.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\ReferenceWithoutSyntax.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\Documents\Templates\ReferenceWithSyntax.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Documents\Visuals\Images\Images.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Maml\Documents\Images\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Maml\Editors\Controls\AttributesGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Maml\Editors\Controls\DialogButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Maml\Editors\MetadataAttributesEditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Maml\Editors\MetadataCustomPropertiesEditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Maml\Editors\MetadataKeywordsEditorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Maml\Documents\Images\Alert Caution.gif" />
+    <Resource Include="Maml\Documents\Images\Alert Note.gif" />
+    <Resource Include="Maml\Documents\Images\Alert Security.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Documents\Visuals\Images\Collapse.png" />
+    <Resource Include="Documents\Visuals\Images\Expand.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="733151f0-b1f8-4bb7-907e-907b37da532f" revisionNumber="0">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <summary>
+      <para>Getting started with Auto-Input Protection (AIP).</para>
+    </summary>
+    <introduction>
+      <para>
+        This document provides guidance on how to add AIP functionality into your existing ASP.NET web sites.
+        For an overview of AIP, see <link xlink:href="48128cb0-a142-46d6-a3e7-1e642867d829" />.
+      </para>
+      <autoOutline lead="Custom lead-in text." />
+    </introduction>
+    <section address="start">
+      <title>Getting Started</title>
+      <content>
+        <para>
+          Download the <externalLink><linkText>AIP installer</linkText><linkUri>https://www.codeplex.com/Release/ProjectReleases.aspx?ProjectName=aip</linkUri></externalLink> 
+					from CodePlex and make sure that you read the <externalLink><linkText>Latest Release Notes</linkText><linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=LatestReleaseNotes</linkUri></externalLink> 
+					carefully before installing.
+        </para>
+        <para>
+          Run the installer and follow the wizard to configure AIP on your system.  After AIP is installed you can add 
+          <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionControl</codeEntityReference> to web forms by dragging it from
+          the toolbox in Visual Studio 2005 and Visual Studio 2008.
+        </para>
+        <alert class="warning">
+          <para>
+            There is an issue in Visual Studio 2005 that may prevent the installer from adding the AIP web control to your toolbox.  This issue
+            does not prevent you from adding the control to the toolbox manually though.  
+						Refer to the <externalLink><linkText>Latest Release Notes</linkText><linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=LatestReleaseNotes</linkUri></externalLink> for help.
+          </para>
+        </alert>
+      </content>
+    </section>
+    <section address="requiredconfig">
+      <title>Required Configuration</title>
+      <content>
+        <para>
+          For AIP to work you must register the AIP virtual request handler so that the generated images will be visible in your website.  The handler serves up
+          the images to clients that request them.
+        </para>
+        <alert class="note">
+          <para>
+            Images are not displayed at design-time when <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionControl</codeEntityReference>
+            is used on a web form in Visual Studio.  A broken image will always be displayed.
+          </para>
+        </alert>
+        <procedure>
+          <title>Follow these steps to configure the AIP request handler.</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>
+                  Open the root web.config file in your project.
+                </para>
+                <para>
+                  If a root web.config file doesn't exist then create one now.  For help, 
+									see <externalLink><linkText>How to: Create Web.config Files</linkText><linkUri>http://msdn2.microsoft.com/en-us/library/k8x4ket8.aspx</linkUri></externalLink></para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  Locate the <codeInline>&lt;httpHandlers&gt;</codeInline> element and add a new <codeInline>&lt;add&gt;</codeInline> element for the
+                  AIP request handler, as in the following example.
+                </para>
+                <codeReference>handler#default</codeReference>
+                <alert class="note">
+                  <para>
+                    The file to which this handler refers does not actually exist.  ASP.NET routes requests to the appropriate handler automatically.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <para>
+          At this point you should be able to add the AIP web control to any web form in your project and it will work as expected.
+        </para>
+      </content>
+    </section>
+    <section address="customconfig">
+      <title>Custom Configuration</title>
+      <content>
+        <para>
+          The appearance of <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionControl</codeEntityReference> is fully customizable.  You can
+          set style properties to modify the appearance of UI elements, such as the title text and the image.  You can also create a custom template to define
+          your own layout for UI elements.
+        </para>
+        <para>
+          The appearance of the images that AIP generates is also fully customizable.  You can create custom text, image and filter providers or you can just
+          set the styles of the built-in providers.  AIP providers are based on the <externalLink><linkText>ASP.NET 2.0 Provider Model</linkText><linkUri>http://msdn2.microsoft.com/en-us/library/aa479030.aspx</linkUri></externalLink>, 
+					so they're easy to create and configure.
+        </para>
+        <para>
+          The following example registers the <codeInline>&lt;autoInputProtection&gt;</codeInline> configuration section and adds the built-in 
+          <codeEntityReference>T:DaveSexton.Web.Controls.CrosshatchAutoInputProtectionFilterProvider</codeEntityReference> to its 
+          <codeInline>&lt;filters&gt;</codeInline> collection element.
+        </para>
+        <codeReference>filters#crosshatch</codeReference>
+        <para>
+          Using the configuration in the example above, the images that AIP generates will contain a random cross hatch overlay using a translucent color that is 
+          sampled from one of the colors in the list.
+        </para>
+        <para>
+          See <externalLink><linkText>AIP Providers</linkText><linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=AIPProvidersBeta2</linkUri></externalLink> 
+					for more information about text, image and filter providers in AIP.
+        </para>
+        <para>
+          Refer to the <externalLink><linkText>How Do I...</linkText><linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=HowDoIBeta2</linkUri></externalLink> 
+					document for more information and usage examples.
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+      <link xlink:href="48128cb0-a142-46d6-a3e7-1e642867d829" />
+      <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtection</codeEntityReference>
+      <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionControl</codeEntityReference>
+      <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionRequestHandler</codeEntityReference>
+      <codeEntityReference>T:DaveSexton.Web.Controls.AutoInputProtectionSessionRequestHandler</codeEntityReference>
+      <externalLink>
+        <linkText>Latest Release Notes</linkText>
+        <linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=LatestReleaseNotes</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>How Do I...</linkText>
+        <linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=HowDoIBeta2</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>AIP Providers</linkText>
+        <linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=AIPProvidersBeta2</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

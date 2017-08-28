@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="48128cb0-a142-46d6-a3e7-1e642867d829" revisionNumber="0">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <summary>
+      <para>Introduction to Auto-Input Protection (AIP).</para>
+    </summary>
+    <introduction>
+      <para>
+        This document provides an overview of AIP.  To get started using AIP right away, see <link xlink:href="733151f0-b1f8-4bb7-907e-907b37da532f" />.
+      </para>
+    </introduction>
+    <section>
+      <title>Overview</title>
+      <content>
+        <autoOutline />
+        <para>
+          The ClassDefinition example consists of only a single snippet (#1) in
+          multiple languages.  Here's how to reference it in a conceptual topic:
+        </para>
+        <codeReference>ClassDefinition#1</codeReference>
+        <para>
+          DimVariable is an example that consists of multiple snippets (String and Int32).
+          Here's how to reference the String snippet:
+        </para>
+        <codeReference>DimVariable#String</codeReference>
+        <para>
+          Here's how to generate a code sample of both DimVariable snippets combined:
+        </para>
+        <codeReference>DimVariable#String,Int32</codeReference>
+        <para>
+          Auto-Input Protection (AIP) is an extensible ASP.NET web control that provides CAPTCHA protection for your blogs, forums, wikis and websites, greatly reducing the likelihood of
+          unwanted form submission from automated spam and hacks.
+        </para>
+        <para>
+          AIP is an open source project that is available on CodePlex at <externalLink><linkText>http://www.codeplex.com/AIP</linkText><linkUri>http://www.codeplex.com/AIP</linkUri></externalLink> 
+					for use under the terms and conditions of the <externalLink><linkText>Microsoft Reciprocal License (Ms-RL)</linkText><linkUri>http://www.codeplex.com/AIP/license</linkUri></externalLink>.  
+					The complete source code is <externalLink><linkText>available for download</linkText><linkUri>https://www.codeplex.com/Release/ProjectReleases.aspx</linkUri></externalLink> 
+					along with the installer and for <externalLink><linkText>online browsing</linkText><linkUri>http://www.codeplex.com/aip/SourceControl/ListDownloadableCommits.aspx</linkUri></externalLink>.
+        </para>
+        <para>
+          DocProject was built from the ground up by <externalLink><linkText>Dave Sexton</linkText><linkUri>http://davesexton.com/blog</linkUri></externalLink>.  
+					The latest release is written in C# 3.0 but the output is built against the Microsoft .NET Framework 2.0 so that it's compatible with both Visual Studio 2005 and 2008, 
+        as well as Visual Web Developer 2005 and 2008.
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+      <link xlink:href="733151f0-b1f8-4bb7-907e-907b37da532f" />
+      <link xlink:href="c6fb3aad-c753-43dd-88e3-31b503cbe507" />
+      <link xlink:href="db4d5144-a274-4c33-a75e-1324a8183b61" />
+      <externalLink>
+        <linkText>AIP Providers (on CodePlex)</linkText>
+        <linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=AIPProvidersBeta2</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

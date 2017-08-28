@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerXmlReference xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>The &lt;$safeitemname$&gt; element is named and contains text content.</para>
+		</introduction>
+		<schemaHierarchy />
+		<syntaxSection>
+			<sections>
+				<section>
+					<content>
+						<code>
+							<![CDATA[<$safeitemname$ name="value">
+	content
+</$safeitemname$>]]>
+						</code>
+					</content>
+				</section>
+			</sections>
+		</syntaxSection>
+		<attributesandElements>
+			<para>The following sections describe attributes, child elements, and parent elements.</para>
+			<attributes>
+				<para>Attributes</para>
+				<table>
+					<tableHeader>
+						<row>
+							<entry>
+								<para>Attribute</para>
+							</entry>
+							<entry>
+								<para>Description</para>
+							</entry>
+						</row>
+					</tableHeader>
+					<row>
+						<entry>
+							<para>name</para>
+						</entry>
+						<entry>
+							<para>Required attribute.</para>
+							<para>The name of the element.</para>
+						</entry>
+					</row>
+				</table>
+			</attributes>
+			<childElement>
+				<para>None.</para>
+				<table>
+				</table>
+			</childElement>
+			<parentElement>
+				<para>Parent Element</para>
+				<table>
+					<tableHeader>
+						<row>
+							<entry>
+								<para>Element</para>
+							</entry>
+							<entry>
+								<para>Description</para>
+							</entry>
+						</row>
+					</tableHeader>
+					<row>
+						<entry>
+							<para>root</para>
+						</entry>
+						<entry>
+							<para>The root element of the document.</para>
+						</entry>
+					</row>
+				</table>
+			</parentElement>
+		</attributesandElements>
+		<textValue>
+			<content>
+				<para>Text is permitted in this element.</para>
+			</content>
+		</textValue>
+		<remarks>
+			<content>
+				<para>Remarks</para>
+			</content>
+		</remarks>
+		<codeExample>
+			<description>
+				<content>
+					<para>The following example shows how to specify text content.</para>
+				</content>
+			</description>
+			<code>
+				<![CDATA[<root>
+	<$safeitemname$>Value</$safeitemname$>
+</root>]]>
+			</code>
+		</codeExample>
+		<relatedTopics />
+	</developerXmlReference>
+</topic>

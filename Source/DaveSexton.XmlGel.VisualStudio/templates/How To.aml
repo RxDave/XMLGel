@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>How-To</para>
+		</introduction>
+		<procedure>
+			<title>Procedure</title>
+			<steps class="ordered">
+				<step>
+					<content>
+						<para>First step</para>
+					</content>
+				</step>
+			</steps>
+		</procedure>
+		<codeExample>
+			<description>
+				<content>
+					<para>The following example shows how to...</para>
+				</content>
+			</description>
+			<code>Code Example</code>
+		</codeExample>
+		<buildInstructions>
+			<para>Build Instructions</para>
+		</buildInstructions>
+		<robustProgramming>
+			<para>Robust Programming</para>
+		</robustProgramming>
+		<security>
+			<para>Security</para>
+		</security>
+		<relatedTopics />
+	</developerHowToDocument>
+</topic>

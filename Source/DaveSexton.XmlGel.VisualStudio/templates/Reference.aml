@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<codeEntityDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<assembly>
+			<assemblyName>Assembly name</assemblyName>
+			<assemblyVersion>Assembly version</assemblyVersion>
+			<assemblyCulture>Assembly culture</assemblyCulture>
+			<assemblyPublicKey>Assembly key</assemblyPublicKey>
+			<assemblyHash>Assembly hash</assemblyHash>
+		</assembly>
+		<codeEntities>
+			<codeEntity>
+				<codeEntityReference>API member ID</codeEntityReference>
+				<summary>
+					<para>Summary abstract</para>
+				</summary>
+				<genericParameters>
+					<genericParameter>
+						<parameterReference>Generic Type parameter</parameterReference>
+						<content>
+							<para>Description</para>
+						</content>
+					</genericParameter>
+				</genericParameters>
+				<parameters>
+					<parameter>
+						<parameterReference>Parameter</parameterReference>
+						<content>
+							<para>Description</para>
+						</content>
+					</parameter>
+				</parameters>
+				<returnValue>
+					<para>Return Value</para>
+				</returnValue>
+				<exceptions>
+					<exception>
+						<codeEntityReference>Exception</codeEntityReference>
+						<content>
+							<para>Details</para>
+						</content>
+					</exception>
+				</exceptions>
+				<threadSafety>
+					<para>Thead-safety</para>
+				</threadSafety>
+				<remarks>
+					<content>
+						<para>Remarks</para>
+					</content>
+				</remarks>
+				<notesForImplementers>
+					<para>Notes for Implementors</para>
+				</notesForImplementers>
+				<notesForCallers>
+					<para>Notes for Callers</para>
+				</notesForCallers>
+				<notesForInheritors>
+					<para>Notes for Inheritors</para>
+				</notesForInheritors>
+				<platformNotes>
+					<platformNote>
+						<platforms>
+							<platform>WinXpHome</platform>
+							<platform>Win98Se</platform>
+							<platform>EcmaCli</platform>
+						</platforms>
+						<content>
+							<para>Note</para>
+						</content>
+					</platformNote>
+				</platformNotes>
+				<codeExamples>
+					<codeExample>
+						<description>
+							<content>
+								<para>The following example shows how to...</para>
+							</content>
+						</description>
+						<code>Code Example</code>
+						<comments>
+							<content>
+								<para>Comments for above code example</para>
+							</content>
+						</comments>
+						<input>
+							<code>Input</code>
+						</input>
+						<output>
+							<code>Output</code>
+						</output>
+						<sampleOutput>
+							<code>Sample output</code>
+						</sampleOutput>
+					</codeExample>
+				</codeExamples>
+				<permissions>
+					<permission>
+						<codeEntityReference>Permission</codeEntityReference>
+						<content>
+							<para>Details</para>
+						</content>
+					</permission>
+				</permissions>
+				<relatedTopics />
+			</codeEntity>
+		</codeEntities>
+	</codeEntityDocument>
+</topic>

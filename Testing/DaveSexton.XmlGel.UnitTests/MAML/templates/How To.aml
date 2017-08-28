@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="00000000-0000-0000-0000-000000000000" revisionNumber="1">
+  <developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    <introduction>
+      <para>Required introduction</para>
+    </introduction>
+    <!-- Optional procedures followed by optional code example but must have
+         at least one procedure or code example -->
+    <procedure>
+      <title>Procedure title</title>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>First step</para>
+          </content>
+        </step>
+        <step>
+          <content>
+            <para>Second step</para>
+          </content>
+        </step>
+      </steps>
+      <conclusion>
+        <content>
+          <para>Optional conclusion</para>
+        </content>
+      </conclusion>
+    </procedure>
+    <codeExample>
+      <description>
+        <content>
+          <para>Optional code example</para>
+        </content>
+      </description>
+      <code><![CDATA[Code Example]]></code>
+    </codeExample>
+    <buildInstructions>
+      <content>
+        <para>Optional instructions for building a code example.</para>
+      </content>
+    </buildInstructions>
+    <robustProgramming>
+      <content>
+        <para>Optional discussion of error handling and other issues related to writing solid code.</para>
+      </content>
+    </robustProgramming>
+    <security>
+      <content>
+        <para>Optional discussion of security issues.</para>
+      </content>
+    </security>
+    <relatedTopics>
+      <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID">Link text</link>
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>Sandcastle on CodePlex</linkText>
+          <linkAlternateText>Go to CodePlex</linkAlternateText>
+          <linkUri>http://Sandcastle.CodePlex.com</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

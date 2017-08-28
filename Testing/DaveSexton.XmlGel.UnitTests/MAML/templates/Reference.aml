@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="00000000-0000-0000-0000-000000000000" revisionNumber="1">
+  <codeEntityDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <!-- NOTE: This is similar to the API reference documentation which is
+         produced by the reference build.  You should probably just use that
+         instead of this. -->
+    <assembly>
+      <assemblyName>Assembly name</assemblyName>
+      <assemblyVersion>Optional assembly version</assemblyVersion>
+      <assemblyCulture>Optional assembly culture</assemblyCulture>
+      <assemblyPublicKey>Optional assembly key</assemblyPublicKey>
+      <assemblyHash>Optional assembly hash</assemblyHash>
+    </assembly>
+    <codeEntities>
+      <codeEntity>
+        <codeEntityReference>API member ID</codeEntityReference>
+        <summary>
+          <para>Optional summary abstract</para>
+        </summary>
+        <genericParameters>
+          <genericParameter>
+            <parameterReference>Optional type parameter</parameterReference>
+            <content>
+              <para>Required type parameter description</para>
+            </content>
+          </genericParameter>
+        </genericParameters>
+        <parameters>
+          <parameter>
+            <parameterReference>Optional parameter</parameterReference>
+            <content>
+              <para>Required parameter description</para>
+            </content>
+          </parameter>
+        </parameters>
+        <returnValue>
+          <para>Optional return value</para>
+        </returnValue>
+        <exceptions>
+          <exception>
+            <codeEntityReference>Optional exception reference</codeEntityReference>
+            <content>
+              <para>Optional exception</para>
+            </content>
+          </exception>
+        </exceptions>
+        <threadSafety>
+          <para>Optional thead-safety note</para>
+        </threadSafety>
+        <remarks>
+          <content>
+            <para>Optional remarks</para>
+          </content>
+        </remarks>
+        <notesForImplementers>
+          <para>Optional notes for implementors</para>
+        </notesForImplementers>
+        <notesForCallers>
+          <para>Optional notes for callers</para>
+        </notesForCallers>
+        <notesForInheritors>
+          <para>Optional notes for inheritors</para>
+        </notesForInheritors>
+        <platformNotes>
+          <platformNote>
+            <platforms>
+              <platform>WinXpHome</platform>
+              <platform>Win98Se</platform>
+              <platform>EcmaCli</platform>
+            </platforms>
+            <content>
+              <para>Optional platform note</para>
+            </content>
+          </platformNote>
+        </platformNotes>
+        <codeExamples>
+          <codeExample>
+            <description>
+              <content>
+                <para>Optional code example</para>
+              </content>
+            </description>
+            <code language="c#" source="Optional external code source" />
+            <code>
+              Optional code
+              <codeFeaturedElement>Optional feature</codeFeaturedElement><placeholder>Optional placeholder</placeholder><comment>Optional comment</comment>
+              Additional code
+            </code>
+            <codeReference>Optional code reference</codeReference>
+            <comments>
+              <content>
+                <para>Optional comments for code example</para>
+              </content>
+            </comments>
+            <input>
+              <code>Optional input example</code>
+            </input>
+            <output>
+              <code>Optional output example</code>
+            </output>
+            <sampleOutput>
+              <code>Optional sample output example</code>
+            </sampleOutput>
+          </codeExample>
+        </codeExamples>
+        <permissions>
+          <permission>
+            <codeEntityReference>Optional permission reference</codeEntityReference>
+            <content>
+              <para>Optional permission</para>
+            </content>
+          </permission>
+        </permissions>
+        <relatedTopics>
+          <link xlink:href="Optional related topic" />
+          <!-- Other typical kinds of link elements are supported -->
+        </relatedTopics>
+      </codeEntity>
+    </codeEntities>
+  </codeEntityDocument>
+</topic>

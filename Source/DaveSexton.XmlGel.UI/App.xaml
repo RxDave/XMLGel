@@ -1,0 +1,87 @@
+﻿<Application x:Class="DaveSexton.XmlGel.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:xmlgel="clr-namespace:DaveSexton.XmlGel.Documents;assembly=DaveSexton.XmlGel"
+						 xmlns:local="clr-namespace:DaveSexton.XmlGel.UI"
+             StartupUri="MainWindow.xaml">
+
+	<Application.Resources>
+
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Tests/AllXNodeTypes.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+
+			<local:XElementNameConverter x:Key="XElementNameConverter" />
+
+			<Style TargetType="xmlgel:Comment">
+				<Setter Property="Foreground" Value="Green" />
+			</Style>
+
+			<Style TargetType="xmlgel:CommentBlock">
+				<Setter Property="Foreground" Value="Green" />
+			</Style>
+
+			<Style TargetType="xmlgel:ErrorBlock">
+				<Setter Property="Foreground" Value="Red" />
+			</Style>
+
+			<Style TargetType="xmlgel:ErrorInline">
+				<Setter Property="Foreground" Value="Red" />
+			</Style>
+
+			<Style TargetType="Span">
+				<Style.Triggers>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}token">
+						<Setter Property="Background" Value="Yellow" />
+					</DataTrigger>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}localUri">
+						<Setter Property="FontStyle" Value="Italic" />
+					</DataTrigger>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}fictitiousUri">
+						<Setter Property="FontStyle" Value="Italic" />
+					</DataTrigger>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}definedTerm">
+						<Setter Property="FontWeight" Value="Bold" />
+					</DataTrigger>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}application">
+						<Setter Property="FontWeight" Value="Bold" />
+					</DataTrigger>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}codeInline">
+						<Setter Property="FontFamily" Value="Courier New" />
+						<Setter Property="Background" Value="WhiteSmoke" />
+					</DataTrigger>
+
+				</Style.Triggers>
+			</Style>
+
+			<Style TargetType="xmlgel:CollapsibleSection">
+				<Style.Triggers>
+
+					<DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource Self}, Converter={StaticResource XElementNameConverter}}"
+											 Value="{}{http://ddue.schemas.microsoft.com/authoring/2003/5}code">
+						<Setter Property="FontFamily" Value="Courier New" />
+						<Setter Property="Background" Value="WhiteSmoke" />
+						<Setter Property="Padding" Value="7" />
+					</DataTrigger>
+
+				</Style.Triggers>
+			</Style>
+
+		</ResourceDictionary>
+
+	</Application.Resources>
+
+</Application>

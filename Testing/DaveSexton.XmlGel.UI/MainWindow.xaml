@@ -1,0 +1,61 @@
+﻿<Window x:Class="DaveSexton.XmlGel.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:maml="clr-namespace:DaveSexton.XmlGel.Maml;assembly=DaveSexton.XmlGel"
+        Title="MainWindow" Height="350" Width="525">
+
+	<Window.Resources>
+		<Style TargetType="Button">
+			<Setter Property="Padding" Value="10 2" />
+			<Setter Property="Margin" Value="10" />
+		</Style>
+	</Window.Resources>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10"
+								Orientation="Horizontal">
+
+			<Button Command="New" Content="New" />
+			<Button Command="Open" Content="Open..." />
+			<Button Command="Save" Content="Save" />
+			<Button Command="SaveAs" Content="Save As..." />
+			<Button Command="FirstPage" Content="Toggle Output" />
+
+		</StackPanel>
+
+		<maml:MamlTopicEditor Name="editor" DocumentContentChanged="editor_DocumentContentChanged"
+													Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" />
+
+		<GridSplitter Name="structureSplitter" Visibility="Hidden"
+									Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+									ShowsPreview="True" ResizeBehavior="PreviousAndNext" ResizeDirection="Columns" />
+
+		<TextBox Name="structureTextBox" Visibility="Hidden"
+						 Grid.Row="1" Grid.Column="2"
+						 ScrollViewer.VerticalScrollBarVisibility="Auto"
+						 TextWrapping="Wrap" IsReadOnly="True" />
+
+		<GridSplitter Name="mamlSplitter" Visibility="Hidden"
+									Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+									ShowsPreview="True" ResizeBehavior="PreviousAndNext" ResizeDirection="Columns" />
+
+		<TextBox Name="mamlTextBox" Visibility="Hidden"
+						 Grid.Row="1" Grid.Column="4"
+						 ScrollViewer.VerticalScrollBarVisibility="Auto"
+						 TextWrapping="Wrap" IsReadOnly="True" />
+
+	</Grid>
+
+</Window>

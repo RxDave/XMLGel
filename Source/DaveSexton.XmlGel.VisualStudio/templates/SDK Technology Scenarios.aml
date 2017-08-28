@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerSDKTechnologyOverviewScenariosDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>Usage Scenarios</para>
+		</introduction>
+		<section address="Section1">
+			<title>Optional section title</title>
+			<content>
+				<para>Add one or more sections with content</para>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerSDKTechnologyOverviewScenariosDocument>
+</topic>

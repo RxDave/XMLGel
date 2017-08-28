@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerGlossaryDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<glossary>
+			<title>Glossary</title>
+			<glossaryEntry>
+				<terms>
+					<term termId="term1">Term 1</term>
+				</terms>
+				<definition>
+					<para>Definition</para>
+				</definition>
+				<relatedEntry termId="term2" />
+			</glossaryEntry>
+			<glossaryEntry>
+				<terms>
+					<term termId="term2">Term 2</term>
+				</terms>
+				<definition>
+					<para>Definition</para>
+				</definition>
+				<relatedEntry termId="term1" />
+			</glossaryEntry>
+		</glossary>
+	</developerGlossaryDocument>
+</topic>

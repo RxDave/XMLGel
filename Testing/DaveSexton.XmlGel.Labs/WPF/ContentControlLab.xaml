@@ -1,0 +1,130 @@
+﻿<local:BaseLab x:Class="DaveSexton.XmlGel.Labs.WPF.ContentControlLab"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:local="clr-namespace:DaveSexton.XmlGel.Labs"
+               xmlns:labs="clr-namespace:DaveSexton.Labs;assembly=DaveSexton.Labs"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               mc:Ignorable="d"
+               d:DesignHeight="300" d:DesignWidth="400"
+							 DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<ContentControl Grid.Row="0">
+			<TextBlock Text="Text content only; no template, no bindings" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="1">
+			<TextBlock Text="{Binding Text}" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="2">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<TextBlock Text="Text template only; no content, no bindings" />
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+		</ContentControl>
+
+		<ContentControl Grid.Row="3">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Purple" BorderThickness="2">
+						<TextBlock Text="{Binding DataContext, Converter={StaticResource GetTypeNameConverter}}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+		</ContentControl>
+
+		<ContentControl Grid.Row="4">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Red" BorderThickness="2">
+						<ContentPresenter Content="{Binding Text}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+			<TextBlock Text="Text content and bound template" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="5">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Black" BorderThickness="2">
+						<TextBlock Text="Ignored bound text" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+			<TextBlock Text="Text content and text template" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="6">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Blue" BorderThickness="2">
+						<ContentPresenter Content="{Binding Text}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+			<TextBlock Text="{Binding Text}" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="7">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Gray" BorderThickness="2">
+						<ContentPresenter Content="{Binding DataContext, Converter={StaticResource GetTypeNameConverter}}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+			<TextBlock Text="Text content and DataContext template" />
+		</ContentControl>
+
+		<ContentControl Grid.Row="8">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Green" BorderThickness="2">
+						<ContentPresenter Content="{Binding DataContext, Converter={StaticResource GetTypeNameConverter}}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+		</ContentControl>
+
+		<ContentControl Grid.Row="9">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Yellow" BorderThickness="2">
+						<ContentPresenter Content="{Binding Path=., Converter={StaticResource GetTypeNameConverter}}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+		</ContentControl>
+
+		<ContentControl Grid.Row="10">
+			<ContentControl.ContentTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Beige" BorderThickness="2">
+						<ContentPresenter Content="{Binding Path=., Converter={StaticResource GetTypeNameConverter}}" />
+					</Border>
+				</DataTemplate>
+			</ContentControl.ContentTemplate>
+			<TextBlock Text="Text content and bound template" />
+		</ContentControl>
+
+	</Grid>
+
+</local:BaseLab>

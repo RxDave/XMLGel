@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerReferenceWithSyntaxDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>$safeitemname$ Reference</para>
+		</introduction>
+		<syntaxSection>
+			<sections>
+				<section>
+					<title>Syntax Section</title>
+					<content>
+						<code>Syntax</code>
+					</content>
+				</section>
+			</sections>
+		</syntaxSection>
+		<parameters>
+			<content>
+				<para>Parameters</para>
+			</content>
+		</parameters>
+		<returnValue>
+			<content>
+				<para>Return value</para>
+			</content>
+		</returnValue>
+		<exceptions>
+			<content>
+				<para>Exceptions</para>
+			</content>
+		</exceptions>
+		<languageReferenceRemarks>
+			<content>
+				<para>Language Reference Remarks</para>
+			</content>
+		</languageReferenceRemarks>
+		<codeExample>
+			<description>
+				<content>
+					<para>The following example shows how to...</para>
+				</content>
+			</description>
+			<code>Code example</code>
+		</codeExample>
+		<dotNetFrameworkEquivalent>
+			<content>
+				<para>.NET Framework Equivalent</para>
+			</content>
+		</dotNetFrameworkEquivalent>
+		<requirements>
+			<content>
+				<para>Requirements</para>
+			</content>
+		</requirements>
+		<section address="Section1">
+			<title>Additional Section</title>
+			<content>
+				<para>Section content</para>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerReferenceWithSyntaxDocument>
+</topic>

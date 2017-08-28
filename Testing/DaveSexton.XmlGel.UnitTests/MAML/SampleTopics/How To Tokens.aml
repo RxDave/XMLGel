@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="a3ae78b0-fd7a-41bc-8f45-584cfb0c02c9" revisionNumber="0">
+  <developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>
+        This topic explains how to use <codeInline>token</codeInline> elements
+        in MAML topics.
+      </para>
+    </introduction>
+    <section>
+      <title>How To: Using Tokens in MAML</title>
+      <content>
+        <para>
+          The <codeInline>token</codeInline> element allows an author to
+          specify MAML markup externally and then share it between multiple
+          topics using a short identifier.
+        </para>
+        <para>
+          To use tokens, Sandcastle must be configured properly and a token XML file 
+          must be created to store the identifiers and values.
+        </para>
+        <alert class="note">
+          <para>
+            A token XML file is used in the same way as a typical shared content
+            file, although item recursion is not supported.
+          </para>
+        </alert>
+        <procedure>
+          <title>To define token identifiers and content:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Create a new XML file and name it, tokens.xml.</para>
+                <alert class="tip">
+                  <para>
+                    The file name does not have to be tokens.xml, however, that 
+                    name is referenced by other examples in this topic.
+                  </para>
+                </alert>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  Add the following content to the tokens.xml file.
+                </para>
+                <code language="xml"><![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<items xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xml:space="preserve">
+  
+  <!-- Define a token for an external hyperlink -->
+  <item id="sandcastle on codeplex">
+    <ddue:externalLink>
+      <ddue:linkText>Sandcastle</ddue:linkText>
+      <ddue:linkAlternateText>Sandcastle on CodePlex</ddue:linkAlternateText>
+      <ddue:linkUri>http://www.codeplex.com/Sandcastle</ddue:linkUri>
+    </ddue:externalLink>
+  </item>
+  
+</items>]]></code>
+                <para>
+                  The previous example specifies the root <codeInline>items</codeInline>
+                  element and adds some XML namespaces that are useful when adding MAML markup.
+                  It also specifies a single <codeInline>item</codeInline> element with
+                  <literal>Sandcastle On CodePlex</literal> as its identifier and an
+                  <codeInline>externalLink</codeInline> element as its content.
+                </para>
+                <para>
+                  To support more tokens in this file simply add additional
+                  <codeInline>item</codeInline> elements.
+                </para>
+                <alert class="tip">
+                  <para>
+                    An <codeInline>item</codeInline> may contain text, MAML markup or both.
+                  </para>
+                </alert>
+                <alert class="tip">
+                  <para>
+                    The token identifier (<codeInline>id</codeInline>) is not case-sensitive.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <procedure>
+          <title>To configure Sandcastle:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Open Sandcastle's conceptual configuration file, conceptual.config.</para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  If it's not present already, add a new <codeInline>component</codeInline>
+                  element for the <codeInline>Microsoft.Ddue.Tools.SharedContentComponent</codeInline> 
+                  build component before the main transformation component.  Then add a child 
+                  <codeInline>content</codeInline> element that references the token XML file, 
+                  a <codeInline>context</codeInline> element for the MAML namespace and a 
+                  <codeInline>replace</codeInline> element that specifies the appropriate match and 
+                  replacement XPath expressions, as in the following example.
+                </para>
+                <code language="xml"><![CDATA[
+<!-- resolve tokens -->
+<component type="Microsoft.Ddue.Tools.SharedContentComponent"
+           assembly="%DXROOT%\ProductionTools\BuildComponents.dll">
+  <context prefix="ddue" name="http://ddue.schemas.microsoft.com/authoring/2003/5" />
+  <content file="tokens.xml" />
+  <replace elements="/*//ddue:token" item="string(.)" />
+</component>]]></code>
+                <alert class="caution">
+                  <para>
+                    Make sure that the file name specified for the <codeInline>file</codeInline>
+                    attribute is the same as the name of your tokens XML file.  Also be sure to 
+                    specify the appropriate path to the file if necessary.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+      </content>
+    </section>
+    <codeExample>
+      <description>
+        <content>
+          <para>
+            The following example uses the <codeInline>token</codeInline> element
+            to import the token that was defined in the previous example.
+          </para>
+        </content>
+      </description>
+      <code language="xml"><![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+  <introduction>
+    <para>
+      This topic provides information on downloading Sandcastle.
+    </para>
+  </introduction>
+
+  <section>
+    <title>Download Sandcastle</title>
+    
+    <content>
+      <para>
+        Visit <token>Sandcastle On CodePlex</token> to download the latest release.
+      </para>
+    </content>
+  </section>
+  
+  <relatedTopics/>
+  
+</developerConceptualDocument>]]></code>
+    </codeExample>
+    <relatedTopics>
+      <externalLink>
+        <linkText>Sandcastle</linkText>
+        <linkAlternateText>Sandcastle on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/Sandcastle</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Sandcastle Styles</linkText>
+        <linkAlternateText>Sandcastle Styles on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/SandcastleStyles</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

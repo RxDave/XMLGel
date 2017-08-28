@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerWalkthroughDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>Walkthrough</para>
+		</introduction>
+		<prerequisites>
+			<content>
+				<para>Prerequisites</para>
+			</content>
+		</prerequisites>
+		<procedure>
+			<title>Procedure</title>
+			<steps class="ordered">
+				<step>
+					<content>
+						<para>First step</para>
+					</content>
+				</step>
+			</steps>
+			<conclusion>
+				<para>Conclusion</para>
+			</conclusion>
+		</procedure>
+		<nextSteps>
+			<content>
+				<para>Next Steps</para>
+			</content>
+		</nextSteps>
+		<relatedTopics />
+	</developerWalkthroughDocument>
+</topic>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="db4d5144-a274-4c33-a75e-1324a8183b61" revisionNumber="0">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <summary>
+      <para>About spam automation and prevention.</para>
+    </summary>
+    <introduction>
+      <para>This document provides an overview about automated spam and how AIP can be used to prevent it.</para>
+      <autoOutline lead="">99</autoOutline>
+    </introduction>
+    <section address="spam">
+      <title>Spam</title>
+      <content>
+        <autoOutline>99</autoOutline>
+      </content>
+      <sections>
+        <section address="overview">
+          <title>Overview</title>
+          <content>
+            <para>
+              Spam is a problem. Not only is it annoying but it's also immoral, and sometimes illegal. Spammers attempt to make money at your expense or decrease the value of
+              the services that your website provides.  The latter case is not usually classified as spam, however, but is actually some form of malicious hacking instead.
+            </para>
+            <para>
+              AIP will help you to protect your web forms against both types of automated attacks.
+            </para>
+          </content>
+        </section>
+        <section address="whyspam">
+          <title>Why spam?</title>
+          <content>
+            <para>
+              A spammer will look for unprotected blogs, forums and wikis that allow links to be posted. The spammer will do what it takes to get their links visible on your web pages.
+            </para>
+            <para>
+              When a link to a spammer's site appears in your website, and your site is indexed by some search engine such as Google, the mere presence of the spammer's link may increase
+              the score of the their website in the search engine. A higher score increases the chances that their site will appear closer to the top in search results. Higher score/rank
+              can mean increased sales and profit from embedded ads in the spammer's site simply because they are increasing their site's visibility on the net. You suffer, your
+              blog/forum/wiki/website users suffer and Joe Spammer makes some loot.
+            </para>
+          </content>
+        </section>
+        <section address="automatedattack">
+          <title>An automated attack</title>
+          <content>
+            <para>
+              Spammers, just like legitimate businesses with morals, find ways to automate processes using computers.
+            </para>
+            <para>
+              One such a way is automated blog spamming, for example.  A person or a computer program searches the more well-known blog sites, including personal blogs that use commercial
+              software, to find anonymous comment forms where they can post their site's links.  An automation bot is then used to repeatedly submit spam to the target websites.
+            </para>
+          </content>
+        </section>
+        <section address="spamprotection">
+          <title>Protection from automated spammers</title>
+          <content>
+            <para>
+              There are several ways that you can protect your web sites from these types of spam attacks.  AIP is a visual CAPTCHA solution, which is only one of those ways, and it isn't always
+              the most appropriate either.
+            </para>
+            <para>
+              One problem with a visual CAPTCHA, for example, is that it's not accessibility-friendly.  If you are blind or simply have trouble seeing or reading then you will have a hard time passing
+              a visual CAPTCHA challenge.
+            </para>
+          </content>
+        </section>
+        <section address="captchabasics">
+          <title>How does an image with text help?</title>
+          <content>
+            <para>
+              CAPTCHA renders text in an image because computers have a much harder time parsing image-based text than people do.  In other words, someone using your website can easily duplicate the
+              text that they see in an image while a computer program cannot.  This allows AIP to distinguish between legitimate users and automated spamming software.  If a post back fails a CAPTCHA
+              challenge then your web form should not grant access to protected resources.
+            </para>
+          </content>
+        </section>
+        <section address="spammersresponse">
+          <title>Spammers response to CAPTCHA</title>
+          <content>
+            <para>
+              Read on for information about how spammers battle CAPTCHA protection.
+            </para>
+            <autoOutline />
+          </content>
+          <sections>
+            <section address="ocr">
+              <title>Has a title</title>
+              <content>
+                <para>
+                  One line-of-attack that automated spammers use against CAPTCHA is optical character recognition (OCR).  OCR is software that can read text from an image.  Examples of OCR can be found in
+                  programs such as Adobe Acrobat and Microsoft Office OneNote, which allows you to search for text in embedded images.
+                </para>
+              </content>
+            </section>
+            <section address="defeatocr">
+              <content>
+                <para>
+                  This sub section has no title.
+                </para>
+                <para>
+                  You can defend against spammer's OCR by making it harder for computers to distinguish between the outline of characters and the image's background and/or clutter-content.  As long as a human
+                  can easily distinguish between the validation text and the rest of the image, you have yourself a CAPTCHA solution.
+                </para>
+              </content>
+            </section>
+          </sections>
+        </section>
+      </sections>
+    </section>
+    <section address="procaptcha">
+      <title>Professional CAPTCHA examples on the World Wide Web</title>
+      <content>
+        <para>
+          Examples of CAPTCHA implementations can be found on many websites that provide public forms for site membership and simple data entry.  
+					Websites such as <externalLink><linkText>CodePlex</linkText><linkUri>https://www.codeplex.com/UserAccount/Register.aspx</linkUri></externalLink> 
+					and <externalLink><linkText>Yahoo!</linkText><linkUri>https://edit.yahoo.com/registration?.intl=us&amp;new=1&amp;.done=http://mail.yahoo.com&amp;.src=ym</linkUri></externalLink> 
+					use a visual CAPTCHA challenge when you sign up for a new account.  Other popular websites use CAPTCHA to prevent spam in public forums and blogs.
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+      <externalLink>
+        <linkText>Spam in blogs</linkText>
+        <linkUri>http://en.wikipedia.org/w/index.php?title=Spam_in_blogs&amp;oldid=114772085</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>CAPTCHA</linkText>
+        <linkUri>http://en.wikipedia.org/w/index.php?title=CAPTCHA&amp;oldid=116053310</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Optical character recognition (OCR)</linkText>
+        <linkUri>http://en.wikipedia.org/w/index.php?title=Optical_character_recognition&amp;oldid=116115377</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

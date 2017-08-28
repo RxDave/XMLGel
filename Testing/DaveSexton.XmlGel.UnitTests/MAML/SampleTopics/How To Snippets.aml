@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1ea7dd5e-b8ac-4f83-8b0a-875af7d45fda" revisionNumber="13">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>This topic explains how to use codeReference elements in MAML topics to include snippets that are defined in an external XML file.</para>
+    </introduction>
+    <section>
+      <title>How To: Use Code Snippets in MAML</title>
+      <content>
+        <para>The codeReference element allows an author to specify code snippets externally and then share them between multiple topics using a short identifier.</para>
+        <para>To use code snippets, Sandcastle must be configured properly and a snippets XML file must be created to store the identifiers and code.</para>
+        <procedure>
+          <title>To define code snippets:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Create a new XML file and name it, snippets.xml.</para>
+                <alert class="tip">
+                  <para>The file name does not have to be snippets.xml, however, that name is referenced by other examples in this topic.</para>
+                </alert>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>Add the following content to the snippets.xml file.</para>
+                <code language="xml" />
+                <para>The previous example specifies a root snippets element and three item elements that each contain a snippet of code in two different programming languages: C# and Visual Basic.</para>
+                <para>The item id is a case-sensitive string that consists of an example ID, a hash (#) and a snippet ID. All parts of the ID are required.</para>
+                <para>Each item supports one or more sampleCode elements for specifying the same code snippet in multiple languages.</para>
+                <para>The language attribute is a case-sensitive identifier that is defined in the presentation style itself. By default, you can choose from VisualBasic, CSharp, ManagedCPlusPlus, JSharp or JScript.</para>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <procedure>
+          <title>To configure Sandcastle:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Open Sandcastle's conceptual configuration file, conceptual.config.</para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>If it's not present already, add a new component element for the Microsoft.Ddue.Tools.ExampleComponent build component before the main transformation component. Then add a child examples element that references the snippets XML file, and various colors elements to apply code coloring, as in the following example.</para>
+                <code language="xml" />
+                <alert class="warning">
+                  <para>Make sure that the file name specified for the examples element's file attribute is the same as the name of your snippets XML file. Also be sure to specify the appropriate path to the file if necessary.</para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+      </content>
+    </section>
+    <relatedTopics />
+  </developerConceptualDocument>
+</topic>

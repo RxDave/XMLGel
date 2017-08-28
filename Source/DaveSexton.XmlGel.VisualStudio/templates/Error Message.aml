@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerErrorMessageDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<nonLocErrorTitle>Non-localizable Error Title</nonLocErrorTitle>
+		<secondaryErrorTitle>Secondary Error Title</secondaryErrorTitle>
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>Error Message</para>
+		</introduction>
+		<procedure>
+			<title>Procedure</title>
+			<steps class="ordered">
+				<step>
+					<content>
+						<para>First step</para>
+					</content>
+				</step>
+			</steps>
+		</procedure>
+		<requirements>
+			<content>
+				<para>Requirements</para>
+			</content>
+		</requirements>
+		<demonstrates>
+			<content>
+				<para>Demonstrates</para>
+			</content>
+		</demonstrates>
+		<codeExample>
+			<description>
+				<content>
+					<para>The following code example shows how to cause this exception to be thrown.</para>
+				</content>
+			</description>
+			<code language="c#">throw new Exception();</code>
+		</codeExample>
+		<relatedTopics />
+	</developerErrorMessageDocument>
+</topic>

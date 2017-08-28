@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cpp" xml:space="preserve">
+    <value>CPlusPlus</value>
+  </data>
+  <data name="vb" xml:space="preserve">
+    <value>VisualBasic</value>
+  </data>
+  <data name="vbs" xml:space="preserve">
+    <value>VisualBasicScript</value>
+  </data>
+  <data name="js" xml:space="preserve">
+    <value>JavaScript</value>
+  </data>
+  <data name="c#" xml:space="preserve">
+    <value>CSharp</value>
+  </data>
+  <data name="j#" xml:space="preserve">
+    <value>JSharp</value>
+  </data>
+  <data name="jscript#" xml:space="preserve">
+    <value>JSharp</value>
+  </data>
+  <data name="cpp#" xml:space="preserve">
+    <value>CPlusPlus</value>
+  </data>
+  <data name="vb#" xml:space="preserve">
+    <value>VisualBasic</value>
+  </data>
+  <data name="xml" xml:space="preserve">
+    <value>Xml</value>
+  </data>
+  <data name="html" xml:space="preserve">
+    <value>Html</value>
+  </data>
+  <data name="unstlib" xml:space="preserve">
+    <value>Unstlib</value>
+  </data>
+  <data name="minterastlib" xml:space="preserve">
+    <value>Minterastlib</value>
+  </data>
+  <data name="mintraastlib" xml:space="preserve">
+    <value>Mintraastlib</value>
+  </data>
+  <data name="vb-c#" xml:space="preserve">
+    <value>VisualBasicAndCSharp</value>
+  </data>
+  <data name="jscript" xml:space="preserve">
+    <value>JavaScript</value>
+  </data>
+  <data name="scr" xml:space="preserve">
+    <value>JavaScript</value>
+  </data>
+  <data name="csharp" xml:space="preserve">
+    <value>CSharp</value>
+  </data>
+  <data name="cs" xml:space="preserve">
+    <value>CSharp</value>
+  </data>
+  <data name="c++" xml:space="preserve">
+    <value>CPlusPlus</value>
+  </data>
+  <data name="cplusplus" xml:space="preserve">
+    <value>CPlusPlus</value>
+  </data>
+  <data name="f#" xml:space="preserve">
+    <value>FSharp</value>
+  </data>
+  <data name="fsharp" xml:space="preserve">
+    <value>FSharp</value>
+  </data>
+  <data name="fsscript" xml:space="preserve">
+    <value>FSharpScript</value>
+  </data>
+  <data name="fs" xml:space="preserve">
+    <value>FSharp</value>
+  </data>
+  <data name="jsharp" xml:space="preserve">
+    <value>JSharp</value>
+  </data>
+  <data name="ecmascript" xml:space="preserve">
+    <value>ECMAScript</value>
+  </data>
+  <data name="javascript" xml:space="preserve">
+    <value>JavaScript</value>
+  </data>
+  <data name="jscriptnet" xml:space="preserve">
+    <value>JScriptNet</value>
+  </data>
+  <data name="jscript.net" xml:space="preserve">
+    <value>JScriptNet</value>
+  </data>
+  <data name="vbnet" xml:space="preserve">
+    <value>VisualBasic</value>
+  </data>
+  <data name="vb.net" xml:space="preserve">
+    <value>VisualBasic</value>
+  </data>
+  <data name="htm" xml:space="preserve">
+    <value>Html</value>
+  </data>
+  <data name="aspnet" xml:space="preserve">
+    <value>AspNet</value>
+  </data>
+  <data name="asp.net" xml:space="preserve">
+    <value>AspNet</value>
+  </data>
+  <data name="xaml" xml:space="preserve">
+    <value>Xaml</value>
+  </data>
+  <data name="xsd" xml:space="preserve">
+    <value>Xsd</value>
+  </data>
+  <data name="xsl" xml:space="preserve">
+    <value>Xsl</value>
+  </data>
+  <data name="sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="sql server" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="pshell" xml:space="preserve">
+    <value>PowerShell</value>
+  </data>
+  <data name="powershell" xml:space="preserve">
+    <value>PowerShell</value>
+  </data>
+  <data name="ps1" xml:space="preserve">
+    <value>PowerShell</value>
+  </data>
+  <data name="py" xml:space="preserve">
+    <value>Python</value>
+  </data>
+  <data name="python" xml:space="preserve">
+    <value>Python</value>
+  </data>
+  <data name="ruby" xml:space="preserve">
+    <value>Ruby</value>
+  </data>
+  <data name="pascal" xml:space="preserve">
+    <value>Pascal</value>
+  </data>
+  <data name="none" xml:space="preserve">
+    <value>None</value>
+  </data>
+</root>

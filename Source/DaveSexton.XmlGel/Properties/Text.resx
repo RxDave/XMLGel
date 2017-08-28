@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alert" xml:space="preserve">
+    <value>alert</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="autoOutline" xml:space="preserve">
+    <value>Outline</value>
+  </data>
+  <data name="AutoOutlineDefaultLead" xml:space="preserve">
+    <value>This topic contains the following sections.</value>
+  </data>
+  <data name="AutoOutlineSubsectionDefaultLead" xml:space="preserve">
+    <value>Select a sub-section:</value>
+  </data>
+  <data name="caption" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="codeEntityReference" xml:space="preserve">
+    <value>Code Entity</value>
+  </data>
+  <data name="codeReference" xml:space="preserve">
+    <value>Code Reference</value>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="computerOutput" xml:space="preserve">
+    <value>Computer Output</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="corporation" xml:space="preserve">
+    <value>Corporation</value>
+  </data>
+  <data name="country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="database" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="definitionTable" xml:space="preserve">
+    <value>Definitions</value>
+  </data>
+  <data name="environmentVariable" xml:space="preserve">
+    <value>Environment Variable</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="externalLink" xml:space="preserve">
+    <value>External Link</value>
+  </data>
+  <data name="foreignPhrase" xml:space="preserve">
+    <value>Foreign Phrase</value>
+  </data>
+  <data name="introduction" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="languageKeyword" xml:space="preserve">
+    <value>Language Keyword</value>
+  </data>
+  <data name="legacyLink" xml:space="preserve">
+    <value>Legacy Link</value>
+  </data>
+  <data name="link" xml:space="preserve">
+    <value>MAML Link</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>list</value>
+  </data>
+  <data name="literal" xml:space="preserve">
+    <value>Literal</value>
+  </data>
+  <data name="localizableUserInput" xml:space="preserve">
+    <value>Localizable User Input</value>
+  </data>
+  <data name="localizedText" xml:space="preserve">
+    <value>Localized text</value>
+  </data>
+  <data name="math" xml:space="preserve">
+    <value>Math</value>
+  </data>
+  <data name="mediaLink" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="newTerm" xml:space="preserve">
+    <value>New Term</value>
+  </data>
+  <data name="para" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="parameter" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="phrase" xml:space="preserve">
+    <value>Phrase</value>
+  </data>
+  <data name="placeholder" xml:space="preserve">
+    <value>Placeholder</value>
+  </data>
+  <data name="procedure" xml:space="preserve">
+    <value>Procedure</value>
+  </data>
+  <data name="quote" xml:space="preserve">
+    <value>Quote</value>
+  </data>
+  <data name="relatedTopics" xml:space="preserve">
+    <value>See Also</value>
+  </data>
+  <data name="RelatedTopicsTitle" xml:space="preserve">
+    <value>See Also</value>
+  </data>
+  <data name="sampleRef" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="sharedContentBlock" xml:space="preserve">
+    <value>Shared Content</value>
+  </data>
+  <data name="subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="system" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="term" xml:space="preserve">
+    <value>Term</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="token" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="ui" xml:space="preserve">
+    <value>UI</value>
+  </data>
+  <data name="unlocalizedText" xml:space="preserve">
+    <value>Unlocalized Text</value>
+  </data>
+  <data name="userInput" xml:space="preserve">
+    <value>User input</value>
+  </data>
+</root>

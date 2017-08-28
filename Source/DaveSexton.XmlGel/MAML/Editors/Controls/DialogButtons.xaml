@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="DaveSexton.XmlGel.Maml.Editors.Controls.DialogButtons"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:controls="clr-namespace:DaveSexton.XmlGel.Maml.Editors.Controls"
+						 DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+	<StackPanel Orientation="Horizontal">
+		<StackPanel.Resources>
+			<Style TargetType="{x:Type Button}">
+				<Setter Property="Width" Value="70" />
+				<Setter Property="Padding" Value="3" />
+			</Style>
+		</StackPanel.Resources>
+
+		<Button Name="okButton" IsDefault="True" Margin="5"
+            Visibility="{Binding OkButtonVisibility}"
+            Content="{Binding OkButtonContent}"
+            Command="{x:Static controls:DialogCommands.Ok}" />
+
+		<Button Name="cancelButton" IsCancel="True" Margin="5,5,15,5"
+            Visibility="{Binding CancelButtonVisibility}"
+            Content="{Binding CancelButtonContent}"
+            Command="{x:Static controls:DialogCommands.Cancel}" />
+
+	</StackPanel>
+
+</UserControl>

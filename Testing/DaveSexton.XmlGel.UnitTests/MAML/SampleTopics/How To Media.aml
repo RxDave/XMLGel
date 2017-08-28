@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="f2c89638-b019-4c0b-8e01-15737c53c755" revisionNumber="0">
+  <developerHowToDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <introduction>
+      <para>
+        This topic explains how to use <codeInline>mediaLink</codeInline> elements in MAML topics with the features provided by the Sandcastle Styles patch.
+      </para>
+    </introduction>
+    <section>
+      <title>Media in MAML</title>
+      <content>
+        <para>
+          The <codeInline>mediaLink</codeInline> and <codeInline>mediaLinkInline</codeInline> elements allow an author to create a list of images in an external XML file and then reference each image using a short identifier in MAML topics.
+        </para>
+        <para>
+          To use image references, Sandcastle must be configured properly and an image XML file must be created to store the identifiers and URIs.
+        </para>
+        <procedure>
+          <title>To define image identifiers and URLs:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Create a new XML file and name it, images.xml.</para>
+                <alert class="tip">
+                  <para>
+                    The file name does not have to be images.xml, however, that name is referenced by other examples in this topic.
+                  </para>
+                </alert>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  Add the following content to the images.xml file.
+                </para>
+                <code language="xml"><![CDATA[
+  <?xml version="1.0" encoding="utf-8"?>
+  <images>
+    
+    <item id="bar_graph">
+      <image file="bar_graph.jpg">
+        <altText>A bar graph.</altText>
+      </image>
+    </item>
+    
+  </images>]]></code>
+                <para>
+                  The previous example specifies the root <codeInline>images</codeInline>
+                  element and adds a single <codeInline>item</codeInline> element that
+                  references an image named, bar_graph.jpg.
+                </para>
+                <para>
+                  To reference more images in this file simply add additional
+                  <codeInline>item</codeInline> and <codeInline>image</codeInline> elements.
+                </para>
+                <alert class="tip">
+                  <para>
+                    The image identifier (<codeInline>id</codeInline>) is not case-sensitive.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+        <procedure>
+          <title>To configure Sandcastle:</title>
+          <steps class="ordered">
+            <step>
+              <content>
+                <para>Open Sandcastle's conceptual configuration file, conceptual.config.</para>
+              </content>
+            </step>
+            <step>
+              <content>
+                <para>
+                  If it's not present already, add a new <codeInline>component</codeInline>
+                  element for the <codeInline>Microsoft.Ddue.Tools.SharedContentComponent</codeInline> 
+                  build component after the main transformation component.  Then add a child 
+                  <codeInline>targets</codeInline> element that references the image XML file, 
+                  as in the following example.
+                </para>
+                <code language="xml"><![CDATA[
+  <!-- resolve art links -->
+  <component type="Microsoft.Ddue.Tools.ResolveArtLinksComponent"
+             assembly="%DXROOT%\ProductionTools\BuildComponents.dll">
+    <targets input="../images"
+             output="Output\media"
+             link="../media"
+             map="images.xml" />
+  </component>]]></code>
+                <para>
+                  The <codeInline>input</codeInline> attribute specifies the path to the folder that 
+                  contains the images referenced by images.xml.  The <codeInline>output</codeInline>
+                  attribute is the folder to which all of the images are copied automatically.  The
+                  <codeInline>link</codeInline> attribute specifies the base URL for the 
+                  <codeInline>src</codeInline> attribute of HTML <codeInline>img</codeInline>
+                  tags that are generated for each <codeInline>image</codeInline> element
+                  found in MAML topics.  The <codeInline>map</codeInline> attribute specifies 
+                  the path and name of the image XML file; in this example, images.xml.
+                </para>
+                <alert class="caution">
+                  <para>
+                    Make sure that the file name specified for the <codeInline>map</codeInline>
+                    attribute is the same as the name of your image XML file.  Also be sure to
+                    specify the appropriate path to the file if necessary.
+                  </para>
+                </alert>
+              </content>
+            </step>
+          </steps>
+        </procedure>
+      </content>
+    </section>
+    <codeExample>
+      <description>
+        <content>
+          <para>
+            The following example uses the <codeInline>mediaLink</codeInline> element
+            to import the image that was defined in the previous example.
+          </para>
+        </content>
+      </description>
+      <code language="xml"><![CDATA[
+  <?xml version="1.0" encoding="utf-8"?>
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+                               xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        This topic has images.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Image and Caption Placement</title>
+      
+      <content>
+        <para>Caption before image (default):</para>
+        <mediaLink>
+          <caption placement="before">Bar Graph</caption>
+          <image xlink:href="bar_graph" />
+        </mediaLink>
+        
+        <para>Caption after image:</para>
+        <mediaLink>
+          <caption placement="after">Bar Graph</caption>
+          <image xlink:href="bar_graph" />
+        </mediaLink>
+        
+        <para>Caption with lead-in text:</para>
+        <mediaLink>
+          <caption lead="Figure 1">Bar Graph</caption>
+          <image xlink:href="bar_graph" />
+        </mediaLink>
+
+        <para>Near image placement (default):</para>
+        <mediaLink>
+          <caption>Bar Graph</caption>
+          <image placement="near" xlink:href="bar_graph" />
+        </mediaLink>
+        
+        <para>Center image placement:</para>
+        <mediaLink>
+          <caption>Bar Graph</caption>
+          <image placement="center" xlink:href="bar_graph" />
+        </mediaLink>
+        
+        <para>Far image placement:</para>
+        <mediaLink>
+          <caption>Bar Graph</caption>
+          <image placement="far" xlink:href="bar_graph" />
+        </mediaLink>
+      </content>
+    </section>
+    
+    <relatedTopics/>
+    
+  </developerConceptualDocument>]]></code>
+      <comments>
+        <content>
+          <alert class="tip">
+            <para>
+              Any combination of image placement, caption placement and lead-in text
+              may be specified.
+            </para>
+          </alert>
+        </content>
+      </comments>
+    </codeExample>
+    <relatedTopics>
+      <externalLink>
+        <linkText>Sandcastle</linkText>
+        <linkAlternateText>Sandcastle on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/Sandcastle</linkUri>
+      </externalLink>
+      <externalLink>
+        <linkText>Sandcastle Styles</linkText>
+        <linkAlternateText>Sandcastle Styles on CodePlex</linkAlternateText>
+        <linkUri>http://www.codeplex.com/SandcastleStyles</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

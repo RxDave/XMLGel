@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="c6fb3aad-c753-43dd-88e3-31b503cbe507" revisionNumber="0">
+  <developerConceptualDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+    <summary>
+      <para>Getting assistance, reporting bugs and requesting features.</para>
+    </summary>
+    <introduction>
+      <para>This document provides a list of online resources that are related to AIP as well as information on where you can ask for assistance, report bugs and request features.</para>
+      <autoOutline lead="">1</autoOutline>
+    </introduction>
+    <section address="assist">
+      <title>Getting Assistance</title>
+      <content>
+        <para>After reading this documentation, you can find additional help on the web.</para>
+      </content>
+      <sections>
+        <section address="onlinehelp">
+          <title>Online Resources</title>
+          <content>
+            <para>
+              Please search this documentation and the <externalLink><linkText>Discussions</linkText><linkUri>http://www.codeplex.com/aip/Thread/List.aspx</linkUri></externalLink> 
+              area first for answers to common questions.  Start a new discussion if you cannot find the help that you need.
+            </para>
+            <para>
+              If you have concerns that you'd like to keep private, 
+              you may <externalLink><linkText>contact Dave Sexton</linkText><linkUri>http://davesexton.com/Contact</linkUri></externalLink> directly.
+            </para>
+          </content>
+        </section>
+        <section address="feedback">
+          <title>Bugs and Features</title>
+          <content>
+            <para>
+              To report bugs and request new features, use the <externalLink><linkText>Issue Tracker</linkText><linkUri>http://www.codeplex.com/aip/WorkItem/List.aspx</linkUri></externalLink>.  
+              Please browse or search the issue tracker for information first, and if you see something that interests you add your vote.
+            </para>
+            <para>
+              If you'd like to donate a bug fix or feature implementation you can add the code as an attachment to a work item.  Please indicate whether
+              you're granting full permission to use and distribute your work any way that I, Dave Sexton, see fit.  For works of a substantial effort I'll be
+              sure to give you full credit.
+            </para>
+          </content>
+        </section>
+      </sections>
+    </section>
+    <section address="resources">
+      <title>Additional Resources</title>
+      <content>
+        <para>You can find more information about AIP on the web.  See the links below.</para>
+        <table>
+          <title>Related Links</title>
+          <tableHeader>
+            <row>
+              <entry>
+                <para>Link</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+          </tableHeader>
+          <row>
+            <entry>
+              <para>
+                <externalLink>
+                  <linkText>Auto-Input Protection</linkText>
+                  <linkUri>http://www.codeplex.com/AIP</linkUri>
+                </externalLink>
+              </para>
+            </entry>
+            <entry>
+              <para>The AIP project home page on CodePlex.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <externalLink>
+                  <linkText>Auto-Input Protection Wikimap</linkText>
+                  <linkUri>http://www.codeplex.com/aip/Wiki/View.aspx?title=Wikimap</linkUri>
+                </externalLink>
+              </para>
+            </entry>
+            <entry>
+              <para>List of AIP wiki articles on CodePlex.</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <externalLink>
+                  <linkText>Dave Sexton's Blog</linkText>
+                  <linkUri>http://davesexton.com/blog</linkUri>
+                </externalLink>
+              </para>
+            </entry>
+            <entry>
+              <para>Related news as well as information about new updates and deployments.</para>
+            </entry>
+          </row>
+        </table>
+      </content>
+    </section>
+    <relatedTopics />
+  </developerConceptualDocument>
+</topic>

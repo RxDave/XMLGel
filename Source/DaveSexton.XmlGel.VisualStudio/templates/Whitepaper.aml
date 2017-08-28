@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerWhitePaperDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<byline>
+			<para>Byline</para>
+		</byline>
+		<date>
+			<para>Date</para>
+		</date>
+		<summarySection>
+			<content>
+				<para>Content Summary</para>
+			</content>
+		</summarySection>
+		<downloadCenterLink>
+			<content>
+				<para>Downloadable Content</para>
+			</content>
+		</downloadCenterLink>
+		<appliesTo>
+			<content>
+				<para>Applies To</para>
+			</content>
+		</appliesTo>
+		<contents>
+			<content>
+				<para>Contents</para>
+			</content>
+		</contents>
+		<introduction>
+			<para>Introduction</para>
+		</introduction>
+		<section address="Section1">
+			<title>Section</title>
+			<content>
+				<para>WhitePaper content</para>
+			</content>
+		</section>
+		<codeExample>
+			<code>Code Example</code>
+		</codeExample>
+		<conclusion>
+			<content>
+				<para>Conclusion</para>
+			</content>
+		</conclusion>
+		<relatedTopics />
+		<additionalInformation>
+			<content>
+				<para>Additional Information</para>
+			</content>
+		</additionalInformation>
+		<authorBio>
+			<content>
+				<para>Author Biography</para>
+			</content>
+		</authorBio>
+	</developerWhitePaperDocument>
+</topic>

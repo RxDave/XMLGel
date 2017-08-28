@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic>
+	<developerSDKTechnologyOverviewTechnologySummaryDocument xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">
+		<summary>
+			<para>Optional summary abstract</para>
+		</summary>
+		<introduction>
+			<para>SDK Summary</para>
+		</introduction>
+		<keywords>
+			<content>
+				<para>Keywords</para>
+			</content>
+		</keywords>
+		<namespaces>
+			<content>
+				<para>Namespaces</para>
+			</content>
+		</namespaces>
+		<relatedTechnologies>
+			<content>
+				<para>Related Technologies</para>
+			</content>
+		</relatedTechnologies>
+		<background>
+			<content>
+				<para>Background</para>
+			</content>
+		</background>
+		<implementingTechnologyNameClasses>
+			<title>Implementing Technology Name Classes</title>
+			<content>
+				<para>Content</para>
+			</content>
+		</implementingTechnologyNameClasses>
+		<technologyNameClassesAtAGlance>
+			<title>Technology Name Classes at a Glance</title>
+			<content>
+				<para>Content</para>
+			</content>
+		</technologyNameClassesAtAGlance>
+		<whatsNew>
+			<content>
+				<para>What's New?</para>
+			</content>
+		</whatsNew>
+		<relatedTopics />
+	</developerSDKTechnologyOverviewTechnologySummaryDocument>
+</topic>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C38D71F0-1C8F-4746-BF8F-D256B2EEAF33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaveSexton.XmlGel.UnitTests</RootNamespace>
+    <AssemblyName>DaveSexton.XmlGel.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DaveSexton.Labs">
+      <HintPath>..\..\External References\Labs\DaveSexton.Labs.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Documents\MamlPartLayoutTests - Nested Jagged Paragraphs.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Jagged Paragraphs.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Nested Jagged Structure.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Structureless Paragraphs.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Jagged Structure.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Nested Basic Structure.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests - Basic Structure.cs" />
+    <Compile Include="Documents\RunNormalizationRangeTests.cs" />
+    <Compile Include="Documents\RunNormalizationTests.cs" />
+    <Compile Include="Documents\MamlPartLayoutTests.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Maml\AutoFix.cs">
+      <DependentUpon>AutoFix.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Maml\MamlGuide.cs">
+      <DependentUpon>MamlGuide.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Maml\SampleTopics.cs">
+      <DependentUpon>SampleTopics.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Maml\Templates.cs">
+      <DependentUpon>Templates.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Maml\BaseTests.cs" />
+    <Compile Include="Xml\SchemaExpectedParticlesInvalidTests.cs" />
+    <Compile Include="Xml\SchemaExpectedParticlesTestContext.cs" />
+    <Compile Include="Xml\SchemaExpectedParticlesValidTests.cs" />
+    <None Include="Maml\AmlUnitTestGenerator.ttinclude" />
+    <Compile Include="Maml\UseCases.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UseCases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\DaveSexton.XmlGel\DaveSexton.XmlGel.csproj">
+      <Project>{dbed830f-878e-451c-a662-fb85d96b72df}</Project>
+      <Name>DaveSexton.XmlGel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaveSexton.XmlGel.Labs\DaveSexton.XmlGel.Labs.csproj">
+      <Project>{7bbea27d-d576-4a3f-ad27-c1450ffe0959}</Project>
+      <Name>DaveSexton.XmlGel.Labs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Maml\AutoFix\ConceptualDocument.aml" />
+    <None Include="Maml\AutoFix\ConceptualDocument-Expected.aml" />
+    <None Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.aml" />
+    <None Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent.aml" />
+    <None Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent-Expected.aml" />
+    <None Include="Maml\AutoFix\MoveParaIntoMissingContent.aml" />
+    <None Include="Maml\AutoFix\MoveParaIntoMissingContent-Expected.aml" />
+    <None Include="Maml\AutoFix\SectionTitle-Expected.aml" />
+    <None Include="Maml\AutoFix\SectionTitle.aml" />
+    <None Include="Maml\AutoFix.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AutoFix.cs</LastGenOutput>
+    </None>
+    <None Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.config" />
+    <None Include="Maml\MamlGuide.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MamlGuide.cs</LastGenOutput>
+    </None>
+    <None Include="Maml\MAMLGuide\SchemaExtensibility.config" />
+    <None Include="Maml\MAMLGuide\MiscElements\markup.config" />
+    <None Include="Maml\SampleTopics.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SampleTopics.cs</LastGenOutput>
+    </None>
+    <None Include="Maml\SampleTopics\AIP Getting Started-Expected.aml" />
+    <None Include="Maml\Templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Templates.cs</LastGenOutput>
+    </None>
+    <None Include="Maml\SampleTopics\AIP About Spam.aml" />
+    <None Include="Maml\SampleTopics\AIP Getting Assistance.aml" />
+    <None Include="Maml\SampleTopics\AIP Getting Started.aml" />
+    <None Include="Maml\SampleTopics\AIP Glossary.aml" />
+    <None Include="Maml\SampleTopics\AIP Introduction.aml" />
+    <None Include="Maml\SampleTopics\Fruits and Veggies Glossary.aml" />
+    <None Include="Maml\SampleTopics\How To Bibliography.aml" />
+    <None Include="Maml\SampleTopics\How To Linking.aml" />
+    <None Include="Maml\SampleTopics\How To Media.aml" />
+    <None Include="Maml\SampleTopics\How To Snippets.aml" />
+    <None Include="Maml\SampleTopics\How To Tokens.aml" />
+    <None Include="Maml\SampleTopics\saved.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Architecture.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Architecture-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip-Expected.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Overview.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging.aml" />
+    <None Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework.aml" />
+    <None Include="Maml\UseCases\slimtune\Basic Concepts.aml" />
+    <None Include="Maml\UseCases\slimtune\Connect Dialog.aml" />
+    <None Include="Maml\UseCases\slimtune\Basic Concepts-Expected.aml" />
+    <None Include="Maml\UseCases\slimtune\Connect Dialog-Expected.aml" />
+    <None Include="Maml\UseCases\slimtune\Run Dialog-Expected.aml" />
+    <None Include="Maml\UseCases\slimtune\Profiler API-Expected.aml" />
+    <None Include="Maml\UseCases\slimtune\Run Dialog.config" />
+    <None Include="Maml\UseCases\slimtune\User Guide-Expected.aml" />
+    <None Include="Maml\UseCases\slimtune\Profiler API.aml" />
+    <None Include="Maml\UseCases\slimtune\Run Dialog.aml" />
+    <None Include="Maml\UseCases\slimtune\User Guide.aml" />
+    <None Include="Maml\UseCases.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UseCases.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Key.snk" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Conceptual.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Error Message.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Glossary.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\How To.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Orientation.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference With Syntax.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference Without Syntax.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Sample.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Architecture.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Code Directory.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Orientation.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Scenarios.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Summary.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\TopicFile.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Troubleshooting.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\User Interface Reference.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Walkthrough.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Whitepaper.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\XML Reference.aml" />
+    <None Include="Maml\MAMLGuide\Glossary.aml" />
+    <None Include="Maml\MAMLGuide\IntelliSense.aml" />
+    <None Include="Maml\MAMLGuide\KnownIssues.aml" />
+    <None Include="Maml\MAMLGuide\Links.aml" />
+    <None Include="Maml\MAMLGuide\MSHelpViewerRoot.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\alert.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\BlockElements.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\code.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\codeReference.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\definitionTable.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\introduction.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\list.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\para.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\quote.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\relatedTopics.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\table.aml" />
+    <None Include="Maml\MAMLGuide\BlockElements\title.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\application.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\codeInline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\command.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\CommonInline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\computeOutputInline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\database.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\environmentVariable.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\errorInline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\fictiousUri.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\foreignPhrase.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\hardware.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\legacyBold.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\legacyItalic.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\legacyUnderline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\literal.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\localUri.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\math.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\newTerm.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\phrase.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\placeholder.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\quoteInline.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\replaceable.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\subscript.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\superscript.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\system.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\ui.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\unmanagedCodeEntityReference.aml" />
+    <None Include="Maml\MAMLGuide\CommonInline\userInput.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\CodeSnippetsFile.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\CompanionFile.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\FileTypes.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\MediaContentFile.aml" />
+    <None Include="Maml\MAMLGuide\FileTypes\TokenFile.aml" />
+    <None Include="Maml\MAMLGuide\LinkElements\codeEntityReference.aml" />
+    <None Include="Maml\MAMLGuide\LinkElements\externalLink.aml" />
+    <None Include="Maml\MAMLGuide\LinkElements\Link.aml" />
+    <None Include="Maml\MAMLGuide\LinkElements\LinkElements.aml" />
+    <None Include="Maml\MAMLGuide\MediaElements\MediaElements.aml" />
+    <None Include="Maml\MAMLGuide\MediaElements\mediaLink.aml" />
+    <None Include="Maml\MAMLGuide\MediaElements\mediaLinkInline.aml" />
+    <None Include="Maml\MAMLGuide\MiscElements\autoOutline.aml" />
+    <None Include="Maml\MAMLGuide\MiscElements\autoOutlineExample.aml" />
+    <None Include="Maml\MAMLGuide\MiscElements\markup.aml" />
+    <None Include="Maml\MAMLGuide\MiscElements\MiscElements.aml" />
+    <None Include="Maml\MAMLGuide\MiscElements\Token.aml" />
+    <None Include="Maml\Templates\Conceptual.aml" />
+    <None Include="Maml\Templates\Error Message.aml" />
+    <None Include="Maml\Templates\Glossary.aml" />
+    <None Include="Maml\Templates\How To.aml" />
+    <None Include="Maml\Templates\Orientation.aml" />
+    <None Include="Maml\Templates\Reference With Syntax.aml" />
+    <None Include="Maml\Templates\Reference Without Syntax.aml" />
+    <None Include="Maml\Templates\Reference.aml" />
+    <None Include="Maml\Templates\Sample.aml" />
+    <None Include="Maml\Templates\SDK Technology Architecture.aml" />
+    <None Include="Maml\Templates\SDK Technology Code Directory.aml" />
+    <None Include="Maml\Templates\SDK Technology Orientation.aml" />
+    <None Include="Maml\Templates\SDK Technology Scenarios.aml" />
+    <None Include="Maml\Templates\SDK Technology Summary.aml" />
+    <None Include="Maml\Templates\Troubleshooting.aml" />
+    <None Include="Maml\Templates\User Interface Reference.aml" />
+    <None Include="Maml\Templates\Walkthrough.aml" />
+    <None Include="Maml\Templates\Whitepaper.aml" />
+    <None Include="Maml\Templates\XML Reference.aml" />
+    <None Include="Maml\MAMLGuide\VersionHistory\v1.0.0.0.aml" />
+    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.0.aml" />
+    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.1.aml" />
+    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.2.aml" />
+    <None Include="Maml\MAMLGuide\VersionHistory\VersionHistory.aml" />
+    <None Include="Maml\MAMLGuide\SchemaExtensibility.aml" />
+    <None Include="Maml\MAMLGuide\Welcome.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

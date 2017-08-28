@@ -1,0 +1,25 @@
+﻿namespace DaveSexton.XmlGel.Maml
+{
+	public enum RelatedTopicCategory
+	{
+		ConceptualConcepts, // 1FE70836-AA7D-4515-B54B-E10C4B516E50
+		HowToTasks, // DAC3A6A0-C863-4E5B-8F65-79EFC6A4BA09
+		WalkthroughTasks, // 4779DD54-5D0C-4CC3-9DB3-BF1C90B721B3
+		TroubleshootingTasks, // 38C8E0D1-D601-4DBA-AE1B-5BEC16CD9B01
+		SampleTasks, // 069EFD88-412D-4E2F-8848-2D5C3AD56BDE
+		OrientationOtherResources, // B137C930-7BF7-48A2-A329-3ADCAEF8868E
+		GlossaryOtherResources, // A689E19C-2687-4881-8CE1-652FF60CF46C
+		ErrorMessageReference, // A635375F-98C2-4241-94E7-E427B47C20B6
+		WhitepaperOtherResources, // 56DB00EC-28BA-4C0D-8694-28E8B244E236
+		XMLReference, // 3272D745-2FFC-48C4-9E9D-CF2B2B784D5F
+		CodeEntityOtherResources, // 4A273212-0AC8-4D72-8349-EC11CD2FF8CD
+		ReferenceWithoutSyntax, // F9205737-4DEC-4A58-AA69-0E621B1236BD
+		ReferenceWithSyntax, // 95DADC4C-A2A6-447A-AA36-B6BE3A4F8DEC
+		UIReference, // B8ED9F21-39A4-4967-928D-160CD2ED9DCE
+		SDKTechnologyOverviewArchitectureConcepts, // 68F07632-C4C5-4645-8DFA-AC87DCB4BD54
+		SDKTechnologyOverviewCodeDirectoryConcepts, // 4BBAAF90-0E5F-4C86-9D31-A5CAEE35A416
+		SDKTechnologyOverviewOrientationOtherResources, // CDB8C120-888F-447B-8AF8-F9540562E7CA
+		SDKTechnologyOverviewScenariosConcepts, // 356C57C4-384D-4AF2-A637-FDD6F088A033
+		SDKTechnologyOverviewTechnologySummaryConcepts, // 19F1BB0E-F32A-4D5F-80A9-211D92A8A715
+	}
+}

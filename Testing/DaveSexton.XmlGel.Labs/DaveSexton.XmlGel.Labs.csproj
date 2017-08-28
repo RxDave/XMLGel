@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LabsVersion>2.0</LabsVersion>
+    <LabsToolsPath>$(MSBuildExtensionsPath)\Labs Framework\$(LabsVersion)\</LabsToolsPath>
+    <LabsAssembliesPath>$(LabsInstallDir)\$(LabsVersion)\Bin\</LabsAssembliesPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BBEA27D-D576-4A3F-AD27-C1450FFE0959}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaveSexton.XmlGel.Labs</RootNamespace>
+    <AssemblyName>DaveSexton.XmlGel.Labs</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Properties\Labs.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DaveSexton.Labs">
+      <HintPath>..\..\External References\Labs\DaveSexton.Labs.dll</HintPath>
+    </Reference>
+    <Reference Include="Rxx">
+      <HintPath>..\..\External References\Rxx\Rxx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core, Version=2.0.20304.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Core.2.0.20304-beta\lib\Net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Interfaces.2.0.20304-beta\lib\Net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.0.20304.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Linq.2.0.20304-beta\lib\Net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.0.20304.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-PlatformServices.2.0.20304-beta\lib\Net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=2.0.20304.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-WPF.2.0.20304-beta\lib\Net45\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseConsoleLab.cs" />
+    <Compile Include="BaseLab.cs" />
+    <Compile Include="Catalog - Anonymous.cs" />
+    <Compile Include="Catalog - Priority.cs" />
+    <Compile Include="Catalog.cs" />
+    <Compile Include="GetTypeNameConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="WPF\ContentControlLab.xaml.cs">
+      <DependentUpon>ContentControlLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\EventMarkupExtension.cs" />
+    <Compile Include="WPF\EventMarkupExtensionLab.xaml.cs">
+      <DependentUpon>EventMarkupExtensionLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\FlowDocumentLayoutLab - Internal.cs">
+      <DependentUpon>FlowDocumentLayoutLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\FlowDocumentLayoutLab.xaml.cs">
+      <DependentUpon>FlowDocumentLayoutLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\RichTextBoxOleLab.xaml.cs">
+      <DependentUpon>RichTextBoxOleLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XML\MamlSchemaLab.cs" />
+    <Compile Include="XML\XmlBuilderLab.cs" />
+    <Compile Include="XML\SchemaValidationLab.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Labs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WPF\ContentControlLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\EventMarkupExtensionLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\FlowDocumentLayoutLab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF\RichTextBoxOleLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\DaveSexton.XmlGel\DaveSexton.XmlGel.csproj">
+      <Project>{dbed830f-878e-451c-a662-fb85d96b72df}</Project>
+      <Name>DaveSexton.XmlGel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Key.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(LabsToolsPath)\Labs.targets" Condition=" Exists('$(LabsToolsPath)\Labs.targets') " />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+			 Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

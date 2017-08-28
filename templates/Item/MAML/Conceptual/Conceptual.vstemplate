@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name Package="{fd6a47a9-0b6d-4a3d-b71d-b7f7b856ba7d}" ID="200" />
+		<Description Package="{fd6a47a9-0b6d-4a3d-b71d-b7f7b856ba7d}" ID="109" />
+		<Icon Package="{fd6a47a9-0b6d-4a3d-b71d-b7f7b856ba7d}" ID="401" />
+		<TemplateID>DaveSexton.XmlGel.VisualStudio.Conceptual</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>80</SortOrder>
+		<RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+		<DefaultName>Conceptual.aml</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ReplaceParameters="true">Conceptual.aml</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
