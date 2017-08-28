@@ -1,0 +1,128 @@
+Structure Bounding Box Calculations
+-----------------------------------
+Based on results from the FlowDocumentLayout lab.
+
+Analysis Summary: 
+
+	Editor Behavior:
+
+	- An insertion point is available for every paragraph.  (See Glossary below for definition of "insertion point".)
+	- An insertion point is available for a document that contains only a single childless section.
+	- An insertion point is available for every childless section, but only when there are no paragraphs in the document.  If there are paragraphs 
+		in the document, then no insertion points are available for any childless sections.
+	- Insertion points are created for the most-nested childless sections only.  A section won't have any hit detection or insertion points if it 
+		contains other sections.  Instead, if it contains a single child section, then that child's hit detection region will span the entire box of 
+		the parent; however, if it contains more than one child section, then its children will share the box of the parent, being partioned into
+		non-overlapping regions that follow the order of the sections within the parent.  Sometimes the height of all child partions are similar, 
+		though sometimes they're not.  It appears to be a matter of depth of nesting or whether paragraphs exist in the document.
+	- The area in which the editor performs hit detection for a given Section changes depending upon the current position of the text pointer.
+		This behavior is evident by examing the current element shown by the lab's mouse adorner as the mouse moves vertically over a given editor.
+		For example, an editor containing a document consisting of a paragraph followed by two nested sections followed by a paragraph will
+		calculate the hit detection region for the nested sections differently based on whether the text pointer is in the first paragraph or 
+		the last paragraph.  When in the first paragraph, the first paragraph itself allows hit detection for the full line height, beginnning at
+		the top of the document.  The first section takes up almost the entire remainder of the hit detection region that follows.  The second
+		section taking up only a small portion at the end of the docuemnt.  The last paragraph is not hit-detectable at all.  When in the last
+		paragraph, the first paragraph is not hit-detectable at all.  The first section takes up only a small portion at the top of the document.
+		The second section takes up a large part of the hit detection region that follows, up to the last paragraph, which takes up the final 
+		region of the document.  The final region is the line height, which is the same size as the first paragraph when the first paragraph has
+		input focus.
+
+		For this reason, and for the reason that the calculated logical boxes must remain static and independant of input focus, the logical box
+		caclulation must not attempt to determine the exact hit detection regions calculated by the editor, but instead must calculate the logical
+		boundaries of sections relative to the other elements in the document, with special care given to consecutive childless elements since they 
+		must share a small visual space, which is determined statically by the editor.
+
+	Logical Box Calculation: 
+
+	- Document.Union is ContentStart Backward and ContentEnd Forward.
+	- Document.Box is always the editor's width and height, subtracting padding and borders.
+	- ElementStart Backward is Rect.Empty
+		- If the element is the first child, whether or not it contains a grandchild Section, but only if it doesn't contain a grandchild Paragraph.
+		- If the element contains a grandchild Paragraph, then the value is the same as ElementStart Forward (though not fully tested).
+	- ElementEnd Forward is Rect.Empty
+		- If the element is the last child, whether or not it contains a grandchild Section, but only if it doesn't contain a grandchild Paragraph.
+		- If the element contains a grandchild Paragraph, then the value is the same as ElementEnd Backward (though not fully tested).
+	- Section.Union is always ElementStart Forward and ElementEnd Backward.
+	
+Glossary:
+
+	Document, document
+		Refer to a FlowDocument.
+
+	Content
+		Refers to the ContentStart or ContentEnd properties of a FlowDocument or Section.
+
+	Element
+		Refers to the ElementStart or ElementEnd properties of a Section.
+
+	Start
+		Refers to the ElementStart or ContentStart properties, as described above.
+
+	End
+		Refers to the ElementEnd or ContentEnd properties, as described above.
+
+	Forward, Backward
+		Refer to the LogicalDirection enum, used by the TextPointer.GetCharacterRect method.
+
+	Union
+		Refers to the rectangular union of a single Start and a single End, per the definitions of Start and End above.
+
+	Box
+		Refers to the logical bounding box of a FlowDocument or Section.  Its precise calculation is specified in-line.
+
+	.
+		A qualifier; e.g., Document.Box refers to the Document's calculated Box.  It doesn't necessarily represent an actual API.
+
+	Any unqualified term
+		Uses the current context that is defined at the beginning of the statement; e.g., the term Union is shorthand for
+		the qualified term Section.Union when used in a sentence that begins with any term qualified by Section, such as Section.Box.
+
+	[, ]
+		Construct a Rect: [x, y, width, height].  The parts can be qualified or unqualified terms and mathematical expressions.
+
+	Insertion Point
+		Refers to a location in the document where clicking causes a blinking text cursor to appear.  Though sometimes
+		it seems that a visual text cursor doesn't appear, e.g., for empty sections; however, typing creates a paragraph at that location anyway.
+		I don't yet exactly know the logic used by the editor to determine placement of the text cursor relative to the position of hit detection, 
+		though I don't think it's necessary to know anyway for the purposes of the MAML editor.  Some details of what's known are listed above in
+		the "Editor Behavior" subsection.
+
+Documents with Section elements only:
+
+1. Empty document: 
+	- Document.Union is Start Backward and End Forward.
+	- Document.Box is [0, 0, Editor.Width, Editor.Height], subtracting padding and borders.
+
+NOTE: For all remaining tests, the Document calculations are the same as above.
+
+2. Document only contains 1 childless Section:
+	- Section.Union is ElementStart Forward and ElementEnd Backward.
+	- Section.Box is Document.Box.
+
+3. Document contains 2 childless sections:
+	- FirstSection.Union is ElementStart Forward and ElementEnd Backward.
+	- FirstSection.Box is [Document.Box.X, Union.Y, Document.Box.Width, Union.Height].
+	- SecondSection.Union is ElementStart Forward and ElementEnd Backward.
+	- SecondSection.Box is [Document.Box.X, Union.Y, Document.Box.Width, Document.Box.Height - Union.Y].
+
+4. Document contains 1 childless section and 1 section that contains 1 childless section: 
+	- FirstSection.Union is ElementStart Forward and ElementEnd Backward.
+	- FirstSection.Box is [Document.Box.X, Union.Y, Document.Box.Width, Union.Height].
+	- 
+
+5. Document contains 1 section that contains 1 childless section and 1 childless section: 
+	- 
+
+6. Document only contains 1 section, which only contains 1 childless section:
+	- ParentSection.Union is ElementStart Forward and ElementEnd Backward.
+	- ParentSection.Box is Document.Box.
+	- ChildSection.Union is ElementStart Forward and ElementEnd Backward.
+	- ChildSection.Box is ParentSection.Box.
+
+7. Document only contains 1 section, which contains 2 childless sections:
+	- ParentSection.Union is ElementStart Forward and ElementEnd Backward.
+	- ParentSection.Box is Document.Box.
+	- FirstChildSection.Union is ElementStart Forward and ElementEnd Backward.
+	- FirstChildSection.Box is [ParentSection.Box.X, Union.Y, ParentSection.Box.Width, Union.Height].
+	- SecondChildSection.Union is ElementStart Forward and ElementEnd Backward.
+	- SecondChildSection.Box is [FirstChildSection.Box.X, Union.Y, FirstChildSection.Box.Width, FirstChildSection.Box.Height - Union.Y].

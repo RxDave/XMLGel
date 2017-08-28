@@ -1,0 +1,36 @@
+XML Gel - MAML Editor
+
+Major Milestones: 
+
+I. Complete the StructurePalette adorners for deleting and inserting elements based on schema
+
+	1. Exclude tabs for elements that either don't make sense; e.g., "any", or have a special UI already built; e.g., "autoOutline" and "title".
+
+II. Proper editor behavior for deleting text, editing text, selecting elements, cut, copy and paste.
+
+III. Semantic editors for the different types of elements
+
+IV. Import and export services in Visual Studio; e.g., token, link, image and code resolution
+
+V. SHFB integration
+
+VI. Complete Visual Studio integration
+
+	1. Use built-in WPF brushes for the editor, such as background and font color.
+		 a. F:\Downloads\Software\Microsoft\Visual Studio\Visual Studio 2010 User Interface Guidelines.mht
+				§02.02.04 VSColors Reference Table
+
+VII. Error Reporting and Diagnostics
+
+	1. When an exception is thrown, show an error report dialog.
+		 a. Display privacy notice.
+		 b. Display a link to a ZIP file (described below), which opens the contents in Windows Explorer.
+		 c. Create a ZIP file containing the following files:
+				a. Document structure (TextElement as XML)
+				b. Document output (MAML XML)
+		 d. Field: "Do not ask me this again."
+				I. Sub-field: "Send error reports automatically."
+		 e. Buttons: Send, Cancel
+		 f. Pressing the Send button encrypts and transmits the ZIP file to my server
+
+VIII. WIX deployment and VS Integration Package

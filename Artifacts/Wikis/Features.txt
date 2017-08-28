@@ -1,0 +1,14 @@
+
+(Don't forget to update the MAML editor discussions in the DocProject forum - there are more than one)
+
+
+MAML Editor Features
+
+- No dependencies
+	- Sandcastle is not required.  (The MAML editor does not compile help files.)
+- WYSIWYM-style editor.  What you see is what you mean (semantically); i.e., actual output may vary depending upon the presentation style used when compiling.
+- Seamless integration with Visual Studio 2010 and Visual Studio 11.
+- Standalone application works just like Visual Studio if you don't have it installed.
+- Supports the Sandcastle Help File Builder (SHFB) Visual Studio add-in, although it's not required.
+- Entire MAML schema is supported.  All document types and elements can be used.
+- Automatic document fix-up.

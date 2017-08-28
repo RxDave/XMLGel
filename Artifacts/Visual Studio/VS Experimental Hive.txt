@@ -1,0 +1,6 @@
+Visual Studio Experimental Hive
+
+Content path:
+
+C:\Users\%USERNAME%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Dave Sexton\MAML Editor\1.0\
+
